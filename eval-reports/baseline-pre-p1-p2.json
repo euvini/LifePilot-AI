@@ -1,0 +1,1974 @@
+{
+  "evaluatedAt": "2026-10-29T22:40:12.869Z",
+  "model": "qwen2.5:3b",
+  "endpoint": "http://localhost:11434",
+  "repetitions": 3,
+  "isSmoke": false,
+  "referenceDate": "scenario-defined",
+  "summary": [
+    {
+      "scenarioId": 1,
+      "name": "Urgente / Curto Prazo (T1 Local)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-11-10",
+      "runsCount": 3,
+      "latencyMedian": 7862,
+      "latencyMean": 8029,
+      "tokensPerSecMean": 37,
+      "legacyScoreMean": 88.3,
+      "qualityScoreMean": 95.2,
+      "pctInLast7DaysMean": 93.3,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "relevanceScoreMean": 11,
+      "specificityScoreMean": 9.2,
+      "dependencyScoreMean": 10,
+      "duplicationScoreMean": 10,
+      "ptBrScorePctMean": 100,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 8614,
+          "tokensPerSec": 34.5,
+          "suggestions": [
+            {
+              "title": "Contratar transporte",
+              "description": "Agendar uma transportadora para o transporte expresso",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar itens que podem ser doados",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Digitalizar e transferir arquivos de trabalho",
+              "description": "Concluir a digitalização e transferência de arquivos de trabalho para o novo local",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Desmontar móveis de uso diário",
+              "description": "Desmontar e embalar móveis que serão usados imediatamente no novo apartamento",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Preparar mala de essenciais",
+              "description": "Preparar uma mala com itens essenciais para os primeiros dias no novo apartamento",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 5,
+          "beforeLast7Days": 0,
+          "pctInLast7Days": 100,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 5
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 90,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 15,
+            "diversityScore": 25
+          },
+          "qualityScore": 97,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Providenciar caixas e embalar",
+                "Mala com itens dos primeiros dias"
+              ],
+              "missingDimensions": [
+                "Água, luz ou internet rápida"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis",
+                "mala de essenciais"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 7862,
+          "tokensPerSec": 37.6,
+          "suggestions": [
+            {
+              "title": "Contratar transporte/frete",
+              "description": "Agendar transporte com a transportadora para a próxima semana",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar itens que podem ser doados e armazenados em um local seguro",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Digitalizar e armazenar documentos importantes",
+              "description": "Criar cópias digitais de documentos importantes e armazenar em um local seguro",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Desmontar móveis de uso diário",
+              "description": "Desmontar móveis que serão transportados em caixas de papelão",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Preparar mala de essenciais",
+              "description": "Preparar uma mala com itens essenciais para os primeiros dias",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 5,
+          "beforeLast7Days": 0,
+          "pctInLast7Days": 100,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 5
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 90,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 15,
+            "diversityScore": 25
+          },
+          "qualityScore": 97,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Providenciar caixas e embalar",
+                "Mala com itens dos primeiros dias"
+              ],
+              "missingDimensions": [
+                "Água, luz ou internet rápida"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "frete",
+                "transportadora",
+                "doação",
+                "doacao",
+                "caixas de papelão",
+                "caixas de papelao",
+                "desmontar móveis",
+                "desmontar moveis",
+                "mala de essenciais"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 7610,
+          "tokensPerSec": 39,
+          "suggestions": [
+            {
+              "title": "Contratar transporte/frete",
+              "description": "Agendar uma transportadora para a mudança expressa",
+              "dueDate": "2026-11-02"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar itens que podem ser doados",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Digitalizar e transferir backup de arquivos",
+              "description": "Concluir digitalização e transferência de arquivos importantes para backup digital",
+              "dueDate": "2026-11-08"
+            },
+            {
+              "title": "Desmontar e embalar móveis de menor uso",
+              "description": "Desmontar e embalar móveis que não serão usados imediatamente",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Desligar e desligar equipamentos eletrônicos",
+              "description": "Desligar e desligar computadores, televisões, e outros dispositivos eletrônicos",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 1,
+          "pctInLast7Days": 80,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 1,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10,
+            "diversityScore": 25
+          },
+          "qualityScore": 91.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 7.5,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Providenciar caixas e embalar"
+              ],
+              "missingDimensions": [
+                "Água, luz ou internet rápida",
+                "Mala com itens dos primeiros dias"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 7.5,
+              "genericTasks": [],
+              "outOfContextTasks": [
+                "Digitalizar e transferir backup de arquivos (contexto inadequado: \"backup\")"
+              ],
+              "genericCount": 0,
+              "outOfContextCount": 1
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "frete",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 2,
+      "name": "Longa Distância Intermunicipal (Familiar T3)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-12-30",
+      "runsCount": 3,
+      "latencyMedian": 8899,
+      "latencyMean": 8831,
+      "tokensPerSecMean": 39.1,
+      "legacyScoreMean": 89.3,
+      "qualityScoreMean": 96.5,
+      "pctInLast7DaysMean": 0,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "relevanceScoreMean": 15,
+      "specificityScoreMean": 10,
+      "dependencyScoreMean": 6.5,
+      "duplicationScoreMean": 10,
+      "ptBrScorePctMean": 100,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 9037,
+          "tokensPerSec": 39,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora para a mudança",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar itens que podem ser doados",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Digitalizar e armazenar documentos importantes",
+              "description": "Fazer backup digital de documentos importantes",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Desmontar móveis de uso ocasional",
+              "description": "Desmontar e embalar móveis que não serão usados diariamente",
+              "dueDate": "2026-12-05"
+            },
+            {
+              "title": "Agendar transferência de contas",
+              "description": "Transferir contas de água, luz e internet para o novo endereço",
+              "dueDate": "2026-12-10"
+            },
+            {
+              "title": "Desligar e desmontar equipamentos eletrônicos",
+              "description": "Desligar e embalar computadores, televisões e outros dispositivos eletrônicos não usados",
+              "dueDate": "2026-12-15"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 3,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 1,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 89.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 96.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6.5,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Inventário de bens e contrato",
+                "Desapego e doação de itens volumosos",
+                "Transferência de água, luz e internet",
+                "Embalagem planejada por cômodos"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6.5,
+              "dependencyInversions": 1,
+              "inversionDetails": [
+                {
+                  "preTask": "Agendar transferência de contas",
+                  "preDate": "2026-12-10",
+                  "postTask": "Contratar caminhão de mudança",
+                  "postDate": "2026-11-15",
+                  "violation": "\"Agendar transferência de contas\" (2026-12-10) deveria anteceder \"Contratar caminhão de mudança\" (2026-11-15)"
+                }
+              ],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis",
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8558,
+          "tokensPerSec": 39.3,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Listar e separar itens que podem ser doados",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Digitalizar e armazenar documentos importantes",
+              "description": "Backup digital de documentos essenciais",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Desmontar móveis de uso ocasional",
+              "description": "Desmontar e embalar móveis que não serão usados diariamente",
+              "dueDate": "2026-12-05"
+            },
+            {
+              "title": "Agendar transferência de contas de água, luz e internet",
+              "description": "Transferir contas para o novo endereço",
+              "dueDate": "2026-12-08"
+            },
+            {
+              "title": "Embalar itens essenciais para os primeiros dias",
+              "description": "Embalar roupas, alimentos essenciais e outros itens necessários para o primeiro dia",
+              "dueDate": "2026-12-10"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 3,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 1,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 89.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 96.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6.5,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Inventário de bens e contrato",
+                "Desapego e doação de itens volumosos",
+                "Transferência de água, luz e internet",
+                "Embalagem planejada por cômodos"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6.5,
+              "dependencyInversions": 1,
+              "inversionDetails": [
+                {
+                  "preTask": "Agendar transferência de contas de água, luz e internet",
+                  "preDate": "2026-12-08",
+                  "postTask": "Contratar caminhão de mudança",
+                  "postDate": "2026-11-15",
+                  "violation": "\"Agendar transferência de contas de água, luz e internet\" (2026-12-08) deveria anteceder \"Contratar caminhão de mudança\" (2026-11-15)"
+                }
+              ],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis",
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8899,
+          "tokensPerSec": 39,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Listar e separar itens que podem ser doados",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Digitalizar e transferir arquivos importantes",
+              "description": "Backup digital de arquivos de trabalho e documentos importantes",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Desmontar móveis de uso ocasional",
+              "description": "Desmontar e embalar móveis que não serão usados diariamente",
+              "dueDate": "2026-12-02"
+            },
+            {
+              "title": "Agendar transferência de contas e serviços",
+              "description": "Transferir contas de água, luz e internet para o novo endereço",
+              "dueDate": "2026-12-05"
+            },
+            {
+              "title": "Desligar e desligar equipamentos eletrônicos",
+              "description": "Desligar e desmontar computadores, televisões e outros dispositivos eletrônicos não usados",
+              "dueDate": "2026-12-10"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 3,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 1,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 89.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 96.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6.5,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Inventário de bens e contrato",
+                "Desapego e doação de itens volumosos",
+                "Transferência de água, luz e internet",
+                "Embalagem planejada por cômodos"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6.5,
+              "dependencyInversions": 1,
+              "inversionDetails": [
+                {
+                  "preTask": "Agendar transferência de contas e serviços",
+                  "preDate": "2026-12-05",
+                  "postTask": "Contratar caminhão de mudança",
+                  "postDate": "2026-11-15",
+                  "violation": "\"Agendar transferência de contas e serviços\" (2026-12-05) deveria anteceder \"Contratar caminhão de mudança\" (2026-11-15)"
+                }
+              ],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis",
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 3,
+      "name": "Cuidados Especiais: Animais e Plantas",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-12-10",
+      "runsCount": 3,
+      "latencyMedian": 7637,
+      "latencyMean": 7749,
+      "tokensPerSecMean": 38.7,
+      "legacyScoreMean": 78.9,
+      "qualityScoreMean": 91.8,
+      "pctInLast7DaysMean": 0,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "relevanceScoreMean": 10,
+      "specificityScoreMean": 10,
+      "dependencyScoreMean": 8,
+      "duplicationScoreMean": 8.8,
+      "ptBrScorePctMean": 100,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 7637,
+          "tokensPerSec": 38.4,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Obter pet travel crate",
+              "description": "Consultar veterinário e adquirir caixa de transporte para cães",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Atualizar registros de vacinação dos cães",
+              "description": "Consultar veterinário para atualização dos registros de vacinação",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar itens que não serão levados para doação",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Desmontar móveis",
+              "description": "Desmontar móveis que serão levados para evitar danos durante o transporte",
+              "dueDate": "2026-11-15"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 1,
+            "days15to30": 4,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 1,
+          "legacyScore": 73.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 86.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 6.5,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Caixa de transporte e cuidados com os pets",
+                "Caminhão de mudança ou frete residencial"
+              ],
+              "missingDimensions": [
+                "Transporte e cuidados com plantas/jardim",
+                "Embalagem de pertences e caixas"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 6.5,
+              "duplicateCount": 1,
+              "duplicatePairs": [
+                {
+                  "taskA": "Obter pet travel crate",
+                  "taskB": "Atualizar registros de vacinação dos cães",
+                  "reason": "Mesma ação canônica duplicada (VETERINARIO_PETS)"
+                }
+              ]
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "desmontar móveis",
+                "desmontar moveis"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 7375,
+          "tokensPerSec": 39.3,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte para a mudança com a transportadora",
+              "dueDate": "2026-11-01"
+            },
+            {
+              "title": "Agendar consultoria veterinária",
+              "description": "Consultar veterinário sobre cuidados dos cães durante a mudança",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Atualizar registros de vacinação dos cães",
+              "description": "Atualizar registros de vacinação dos cães para a viagem",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Obter certificado de viagem para os cães",
+              "description": "Obter certificado de viagem e vacinação dos cães para a viagem",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar itens não essenciais para doação",
+              "dueDate": "2026-11-15"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 2,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 94,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Caixa de transporte e cuidados com os pets",
+                "Caminhão de mudança ou frete residencial"
+              ],
+              "missingDimensions": [
+                "Transporte e cuidados com plantas/jardim",
+                "Embalagem de pertences e caixas"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8236,
+          "tokensPerSec": 38.5,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora para a mudança de Coimbra para Braga",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Obter certificado de vacinação dos cães",
+              "description": "Consultar veterinário para atualizar as vacinas dos cães e obter o certificado de vacinação",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Adquirir caixa de transporte para cães",
+              "description": "Comprar uma caixa de transporte adequada para os cães para a viagem",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar itens que podem ser doados ou vendidos antes da mudança",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Desmontar móveis não essenciais",
+              "description": "Desmontar e embalar móveis que não serão necessários para a nova moradia",
+              "dueDate": "2026-11-20"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 1,
+            "days15to30": 4,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 77.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 95,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Caixa de transporte e cuidados com os pets",
+                "Caminhão de mudança ou frete residencial",
+                "Embalagem de pertences e caixas"
+              ],
+              "missingDimensions": [
+                "Transporte e cuidados com plantas/jardim"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 4,
+      "name": "Estudante / Quarto Individual (Baixo Volume)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-11-20",
+      "runsCount": 3,
+      "latencyMedian": 6208,
+      "latencyMean": 6481,
+      "tokensPerSecMean": 37,
+      "legacyScoreMean": 79.3,
+      "qualityScoreMean": 95.6,
+      "pctInLast7DaysMean": 16.7,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "relevanceScoreMean": 11.3,
+      "specificityScoreMean": 10,
+      "dependencyScoreMean": 9.3,
+      "duplicationScoreMean": 10,
+      "ptBrScorePctMean": 100,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 7140,
+          "tokensPerSec": 35,
+          "suggestions": [
+            {
+              "title": "Contratar transporte de mudança",
+              "description": "Agendar a contratação de uma transportadora para a mudança de quarto universitário",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar os itens que podem ser doados ou vendidos",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Digitalizar e armazenar documentos importantes",
+              "description": "Digitalizar e armazenar documentos importantes como certificados de vacinação e contratos",
+              "dueDate": "2026-11-08"
+            },
+            {
+              "title": "Desmontar móveis de uso ocasional",
+              "description": "Desmontar e embalar móveis que não serão utilizados diariamente",
+              "dueDate": "2026-11-15"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 3,
+          "pctInLast7Days": 25,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 2,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 75.33333333333333,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 8.333333333333332,
+            "diversityScore": 25
+          },
+          "qualityScore": 94.3,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 11.3,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 11.3,
+              "coveragePct": 75,
+              "matchedDimensions": [
+                "Doação de livros, roupas e desapego",
+                "Frete pequeno porte / carreto / van",
+                "Embalagem em malas e caixas"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 6095,
+          "tokensPerSec": 37.4,
+          "suggestions": [
+            {
+              "title": "Contratar transporte de mudança",
+              "description": "Agendar uma transportadora para o transporte de mudança",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e listar itens que podem ser doados",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Digitalizar e armazenar documentos importantes",
+              "description": "Backup digital de documentos importantes como certificados de estudo e notas",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Desmontar e embalar móveis de menor uso",
+              "description": "Desmontar e embalar móveis que não serão usados no novo quarto",
+              "dueDate": "2026-11-15"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 3,
+          "pctInLast7Days": 25,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 2,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 83.33333333333333,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 8.333333333333332,
+            "diversityScore": 25
+          },
+          "qualityScore": 96.3,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 11.3,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 11.3,
+              "coveragePct": 75,
+              "matchedDimensions": [
+                "Doação de livros, roupas e desapego",
+                "Frete pequeno porte / carreto / van",
+                "Embalagem em malas e caixas"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 6208,
+          "tokensPerSec": 38.7,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora para a próxima semana",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Listar e separar itens que podem ser doados para a próxima semana",
+              "dueDate": "2026-11-06"
+            },
+            {
+              "title": "Digitalizar e transferir arquivos de trabalho",
+              "description": "Concluir a digitalização e transferência de arquivos importantes para o servidor de backup",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Desmontar e embalar móveis de menor uso",
+              "description": "Desmontar e embalar móveis que não serão necessários na nova residência",
+              "dueDate": "2026-11-12"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 3,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 79.16666666666666,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 4.166666666666666,
+            "diversityScore": 25
+          },
+          "qualityScore": 96.3,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 11.3,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 11.3,
+              "coveragePct": 75,
+              "matchedDimensions": [
+                "Doação de livros, roupas e desapego",
+                "Frete pequeno porte / carreto / van",
+                "Embalagem em malas e caixas"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 5,
+      "name": "Home Office / Equipamentos de TI",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2027-01-15",
+      "runsCount": 3,
+      "latencyMedian": 8918,
+      "latencyMean": 9073,
+      "tokensPerSecMean": 38.2,
+      "legacyScoreMean": 74.8,
+      "qualityScoreMean": 94.7,
+      "pctInLast7DaysMean": 0,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "relevanceScoreMean": 13,
+      "specificityScoreMean": 10,
+      "dependencyScoreMean": 6.7,
+      "duplicationScoreMean": 10,
+      "ptBrScorePctMean": 100,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 9395,
+          "tokensPerSec": 38.7,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-12-15"
+            },
+            {
+              "title": "Agendar backup digital de arquivos de trabalho",
+              "description": "Transferir arquivos importantes para um servidor de backup",
+              "dueDate": "2026-12-30"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar e organizar itens que podem ser doados",
+              "dueDate": "2027-01-05"
+            },
+            {
+              "title": "Desmontar e embalar equipamentos de escritório",
+              "description": "Desmontar computadores, monitores e outros dispositivos de escritório",
+              "dueDate": "2026-12-20"
+            },
+            {
+              "title": "Cablear e embalar dispositivos eletrônicos",
+              "description": "Cablear e embalar dispositivos eletrônicos como smartphones e tablets",
+              "dueDate": "2026-12-25"
+            },
+            {
+              "title": "Desligar e desmontar dispositivos eletrônicos não essenciais",
+              "description": "Desligar e desmontar dispositivos eletrônicos que não serão levados",
+              "dueDate": "2026-12-30"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 1,
+            "days15to30": 4,
+            "days8to14": 1,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 81.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 95,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Proteção de computadores, monitores e cabos",
+                "Contratação de caminhão ou frete seguro",
+                "Embalagem dos itens do escritório"
+              ],
+              "missingDimensions": [
+                "Agendamento e transferência rápida de internet"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "doação",
+                "doacao",
+                "embalar"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8918,
+          "tokensPerSec": 37.8,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-12-01"
+            },
+            {
+              "title": "Digitalizar e transferir arquivos de trabalho",
+              "description": "Backup digital de arquivos importantes",
+              "dueDate": "2026-12-15"
+            },
+            {
+              "title": "Desmontar e embalar computadores e monitores",
+              "description": "Protetor de monitor e embalagem de computadores",
+              "dueDate": "2027-01-01"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Separar itens que não serão levados",
+              "dueDate": "2026-12-31"
+            },
+            {
+              "title": "Agendar consultas veterinárias para animais de estimação",
+              "description": "Atualizar vacinação e agendar transporte de animais",
+              "dueDate": "2026-12-10"
+            },
+            {
+              "title": "Desligar e desmontar dispositivos eletrônicos não essenciais",
+              "description": "Desligar e desmontar dispositivos de uso ocasional",
+              "dueDate": "2027-01-05"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 1,
+            "days8to14": 2,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 69.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 93,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Proteção de computadores, monitores e cabos",
+                "Contratação de caminhão ou frete seguro",
+                "Embalagem dos itens do escritório"
+              ],
+              "missingDimensions": [
+                "Agendamento e transferência rápida de internet"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "embalar",
+                "doação",
+                "doacao"
+              ],
+              "totalViolations": 0
+            }
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8905,
+          "tokensPerSec": 38.1,
+          "suggestions": [
+            {
+              "title": "Contratar caminhão de mudança",
+              "description": "Agendar transporte com a transportadora",
+              "dueDate": "2026-12-15"
+            },
+            {
+              "title": "Agendar backup digital de arquivos de trabalho",
+              "description": "Transferir arquivos importantes para o backup digital",
+              "dueDate": "2026-12-10"
+            },
+            {
+              "title": "Separar itens para doação",
+              "description": "Desapegar itens não essenciais e separar para doação",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Desmontar móveis de uso diário",
+              "description": "Desmontar e embalar móveis que serão usados no dia da mudança",
+              "dueDate": "2026-12-05"
+            },
+            {
+              "title": "Cablear e embalar computadores e monitores",
+              "description": "Protetor de monitor e embalar computadores com filme adesivo",
+              "dueDate": "2026-12-10"
+            },
+            {
+              "title": "Transferir contas de água, luz e internet",
+              "description": "Agendar transferência de contas para a nova residência",
+              "dueDate": "2026-12-15"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 6,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 73.28571428571428,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 14.285714285714285,
+            "diversityScore": 25
+          },
+          "qualityScore": 96,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Proteção de computadores, monitores e cabos",
+                "Agendamento e transferência rápida de internet",
+                "Contratação de caminhão ou frete seguro",
+                "Embalagem dos itens do escritório"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "caminhão de mudança",
+                "caminhao de mudanca",
+                "transportadora",
+                "desapegar",
+                "doação",
+                "doacao",
+                "embalar",
+                "desmontar móveis",
+                "desmontar moveis",
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

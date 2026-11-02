@@ -1,0 +1,1135 @@
+{
+  "evaluatedAt": "2026-10-29T22:18:04.005Z",
+  "model": "qwen2.5:3b",
+  "endpoint": "http://localhost:11434",
+  "repetitions": 3,
+  "isSmoke": false,
+  "referenceDate": "scenario-defined",
+  "summary": [
+    {
+      "scenarioId": 1,
+      "name": "Urgente / Curto Prazo (T1 Local)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-11-10",
+      "runsCount": 3,
+      "latencyMedian": 11004,
+      "latencyMean": 12264,
+      "tokensPerSecMean": "35.6",
+      "legacyScoreMean": 86.7,
+      "qualityScoreMean": 90.7,
+      "pctInLast7DaysMean": 86.7,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 16963,
+          "tokensPerSec": 33.8,
+          "suggestions": [
+            {
+              "title": "Reservar transporte express para a mudança",
+              "description": "Reservar um serviço de transporte express para transportar os pertences do apartamento de Lisboa (Alfama) para Lisboa (Parque das Nações) antes da mudança.",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Declutar e organizar os pertences",
+              "description": "Organizar e separar os pertences para declaração, doando ou descartando itens desnecessários antes da mudança.",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Transferir as contas de água e eletricidade",
+              "description": "Transferir as contas de água e eletricidade para o novo endereço e atualizar as informações nos serviços relevantes.",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Packing de pertences não essenciais",
+              "description": "Packing de pertences que não serão necessários durante a mudança, como livros e objetos de decoração.",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Final de preparação e inspeção",
+              "description": "Preparar um pequeno mala com itens essenciais para a mudança e realizar uma inspeção final dos pertences.",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 5,
+          "beforeLast7Days": 0,
+          "pctInLast7Days": 100,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 5
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10,
+            "diversityScore": 25
+          },
+          "qualityScore": 91,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 20,
+            "relevance": 6,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 8826,
+          "tokensPerSec": 36,
+          "suggestions": [
+            {
+              "title": "Reservar transporte expresso para Lisboa (Parque das Nações)",
+              "description": "Reservar um serviço de transporte expresso para a chegada no destino.",
+              "dueDate": "2026-11-01"
+            },
+            {
+              "title": "Declutar e organizar o apartamento em Lisboa (Alfama)",
+              "description": "Separar itens para manter, doar ou entregar.",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Atualizar dados de internet e energia no novo endereço",
+              "description": "Transferir dados de internet e energia para o novo endereço.",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Pacote de itens essenciais para o novo endereço",
+              "description": "Selecionar e embalar itens essenciais para o novo endereço.",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Finalizar preparações e verificação de última hora",
+              "description": "Preparar o último bagageiro pessoal e realizar uma verificação de última hora.",
+              "dueDate": "2026-11-09"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 1,
+          "pctInLast7Days": 80,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 1,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 90,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 15,
+            "diversityScore": 25
+          },
+          "qualityScore": 94,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 20,
+            "relevance": 9,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 11004,
+          "tokensPerSec": 37,
+          "suggestions": [
+            {
+              "title": "Reservar transporte express para o dia 2026-11-05",
+              "description": "Reservar um transporte express para transportar os pertences da mudança de Lisboa (Alfama) para Lisboa (Parque das Nações) no dia 2026-11-05.",
+              "dueDate": "2026-11-01"
+            },
+            {
+              "title": "Declutar e organizar os pertences para a mudança",
+              "description": "Organizar e separar os pertences para a mudança, eliminando o que não será levado e organizando o que será levado.",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Atualizar as informações de internet e água no novo endereço",
+              "description": "Contatar a empresa de internet e a fornecedora de água para atualizar as informações de endereço no novo endereço.",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Pacote de itens essenciais para o novo endereço",
+              "description": "Pacote de itens essenciais para o novo endereço, como lenços umedecidos, sabonete, sabão em pó, etc.",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Pacote de itens essenciais para o novo endereço (segunda parte)",
+              "description": "Pacote de itens essenciais para o novo endereço, como remédios, medicamentos, etc.",
+              "dueDate": "2026-11-09"
+            }
+          ],
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 1,
+          "pctInLast7Days": 80,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 1,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 1,
+          "legacyScore": 85,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10,
+            "diversityScore": 25
+          },
+          "qualityScore": 87,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 20,
+            "relevance": 6,
+            "diversity": 11
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 2,
+      "name": "Longa Distância Intermunicipal (Familiar T3)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-12-30",
+      "runsCount": 3,
+      "latencyMedian": 10373,
+      "latencyMean": 10603,
+      "tokensPerSecMean": "38.2",
+      "legacyScoreMean": 74.1,
+      "qualityScoreMean": 82.6,
+      "pctInLast7DaysMean": 5.6,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 11391,
+          "tokensPerSec": 37.6,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para a distância e volume",
+              "description": "Reservar um caminhão ou ônibus para transportar as coisas da casa para o destino",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Declutar e organizar as coisas desnecessárias",
+              "description": "Separar as coisas que não serão levadas para a mudança e organizar o que será levado",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Transferir as contas de água, luz e internet",
+              "description": "Contatar a empresa de energia, a de água e a de internet para transferir as contas para o novo endereço",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Pacote de itens não essenciais",
+              "description": "Pacote as coisas que não serão levadas para a mudança, como móveis de escritório ou itens de cozinha",
+              "dueDate": "2026-12-02"
+            },
+            {
+              "title": "Pacote de itens essenciais",
+              "description": "Pacote as coisas essenciais que serão levadas, como roupas, documentos e itens de higiene pessoal",
+              "dueDate": "2026-12-05"
+            },
+            {
+              "title": "Finalizar preparação",
+              "description": "Concluir a preparação, incluindo a organização do armário, a leitura de medidores e a inspeção final",
+              "dueDate": "2026-12-10"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 3,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 1,
+          "legacyScore": 85.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 87.42857142857143,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 20,
+            "relevance": 6.428571428571428,
+            "diversity": 11
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 10373,
+          "tokensPerSec": 38.4,
+          "suggestions": [
+            {
+              "title": "Reservar Transporte",
+              "description": "Reservar um caminhão ou ônibus para transportar pertences da casa para a nova moradia.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Decluttering e Digitalização",
+              "description": "Organizar e separar pertences desnecessários, fazer cópias de segurança de arquivos digitais e transferir arquivos importantes para o novo local.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Atualizar Endereço Útil",
+              "description": "Atualizar endereço em contas de internet, telefone e outros serviços essenciais.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Packing Não-Essenciais",
+              "description": "Pacote e armazenamento de pertences que não serão necessários imediatamente em casa nova.",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Packing Essenciais",
+              "description": "Pacote e armazenamento de pertences essenciais que serão necessários imediatamente em casa nova.",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Final de Preparação",
+              "description": "Preparação final, incluindo a montagem de um mala de viagem pessoal, leitura de medidores e inspeção final.",
+              "dueDate": "2026-12-02"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 5,
+            "days15to30": 1,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 1,
+          "legacyScore": 70.57142857142857,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 3.571428571428571,
+            "diversityScore": 25
+          },
+          "qualityScore": 79.14285714285714,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 16,
+            "relevance": 2.142857142857143,
+            "diversity": 11
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 10044,
+          "tokensPerSec": 38.5,
+          "suggestions": [
+            {
+              "title": "Reservar transporte para a mudança",
+              "description": "Reserve um caminhão ou ônibus para transportar a mudança de Porto para Faro.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Declutar e organizar o armário",
+              "description": "Organize e descarte itens desnecessários do armário e armários de cozinha.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Transferir água e luz",
+              "description": "Transferir a ligação de água e luz para a nova moradia em Faro.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Pacote de itens essenciais",
+              "description": "Pacote de itens essenciais para a mudança, incluindo roupas, calçados e documentos.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Pacote de itens para o novo lar",
+              "description": "Pacote de itens para o novo lar, incluindo roupas de cama e toalete, utensílios de cozinha e outros itens pessoais.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Finalizar a mudança",
+              "description": "Realizar a última verificação da mudança e preparar o armário para a mudança.",
+              "dueDate": "2026-12-30"
+            }
+          ],
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 16.666666666666664,
+          "windows": {
+            "beyond30d": 5,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 66.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 81.28571428571429,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 12,
+            "relevance": 4.285714285714286,
+            "diversity": 15
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 3,
+      "name": "Cuidados Especiais: Animais e Plantas",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-12-10",
+      "runsCount": 3,
+      "latencyMedian": 9522,
+      "latencyMean": 9481,
+      "tokensPerSecMean": "36.9",
+      "legacyScoreMean": 63.5,
+      "qualityScoreMean": 80,
+      "pctInLast7DaysMean": 0,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 9522,
+          "tokensPerSec": 38.7,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para o percurso",
+              "description": "Reservar um veículo ou caminhão para transportar todos os pertences da moradia para a nova residência.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Declutar e organizar pertences não essenciais",
+              "description": "Organizar e separar pertences que não serão levados para a nova moradia, como roupas de cama e toalhas.",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Transferir água e luz para a nova moradia",
+              "description": "Contatar a empresa de água e luz para transferir os serviços para a nova moradia.",
+              "dueDate": "2026-11-25"
+            },
+            {
+              "title": "Pacote digital e backup de dispositivos eletrônicos",
+              "description": "Pacote digital de todos os documentos importantes e backup de dispositivos eletrônicos como computadores e televisões.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Pacote de monitorização e segurança para cães",
+              "description": "Preparar pacotes de monitorização para os cães, incluindo coleiras GPS e pacotes de alimentação.",
+              "dueDate": "2026-11-15"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 74.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 85.28571428571429,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 16,
+            "relevance": 4.285714285714286,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 9258,
+          "tokensPerSec": 36.9,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para a distância e volume",
+              "description": "Reservar um veículo ou caminhão para transportar pertences de Coimbra para Braga",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Declutrando e organizando",
+              "description": "Separar e organizar pertences para o transporte, descartar itens desnecessários e doar itens que podem ser usados por outras pessoas",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Transferir internet e outros serviços",
+              "description": "Contatar a empresa de internet e outros serviços para transferir as contas para a nova residência em Braga",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Pacote de tecnologia e backup digital",
+              "description": "Preparar um pacote com dispositivos eletrônicos e fazer um backup digital desses dispositivos",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Pacote de cuidados para os cães",
+              "description": "Preparar um pacote com vacinas, ração e outros itens necessários para os cães",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 3,
+          "semanticDuplicates": 0,
+          "legacyScore": 58.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 1,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 77.28571428571428,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 8,
+            "relevance": 4.285714285714286,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 9664,
+          "tokensPerSec": 35.2,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para a distância e volume de bagagem",
+              "description": "Reserve um veículo ou caminhão para transportar todos os pertences da moradia para Braga.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Declutar e organizar pertences desnecessários",
+              "description": "Separe e organize os pertences desnecessários para doação ou descarte.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Transferir as contas de água, luz e internet",
+              "description": "Contate a sua prestadora de serviços para transferir as contas para Braga.",
+              "dueDate": "2026-11-20"
+            },
+            {
+              "title": "Pacote de digitalização e backup",
+              "description": "Faça uma cópia de segurança de todos os documentos digitais e backup de arquivos importantes.",
+              "dueDate": "2026-11-15"
+            },
+            {
+              "title": "Pacote de preparação para cães e jardim",
+              "description": "Garantir que os cães têm vacinas atualizadas e que os equipamentos de jardim estão prontos para uso.",
+              "dueDate": "2026-11-10"
+            }
+          ],
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 3,
+          "semanticDuplicates": 0,
+          "legacyScore": 58.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 1,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 77.28571428571428,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 8,
+            "relevance": 4.285714285714286,
+            "diversity": 15
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 4,
+      "name": "Estudante / Quarto Individual (Baixo Volume)",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2026-11-20",
+      "runsCount": 3,
+      "latencyMedian": 7481,
+      "latencyMean": 7377,
+      "tokensPerSecMean": "37.9",
+      "legacyScoreMean": 69.8,
+      "qualityScoreMean": 82.7,
+      "pctInLast7DaysMean": 0,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 7481,
+          "tokensPerSec": 36.6,
+          "suggestions": [
+            {
+              "title": "Reservar transporte para a mudança",
+              "description": "Reservar um veículo ou transporte adequado para transportar pertences do quarto universitário para o Porto.",
+              "dueDate": "2026-11-03"
+            },
+            {
+              "title": "Declutar e organizar pertences não essenciais",
+              "description": "Organizar e separar pertences não essenciais para futura embalagem.",
+              "dueDate": "2026-11-06"
+            },
+            {
+              "title": "Conferir e fazer backup de dispositivos eletrônicos",
+              "description": "Conferir dispositivos eletrônicos como computadores e televisões e fazer cópias de segurança digitais.",
+              "dueDate": "2026-11-09"
+            },
+            {
+              "title": "Pacote de itens não essenciais",
+              "description": "Pacote e embalar pertences não essenciais para transporte.",
+              "dueDate": "2026-11-12"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 3,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 79.16666666666666,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 4.166666666666666,
+            "diversityScore": 25
+          },
+          "qualityScore": 87.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 20,
+            "relevance": 2.5,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 6984,
+          "tokensPerSec": 37.6,
+          "suggestions": [
+            {
+              "title": "Reservar transporte para a mudança",
+              "description": "Reserve um transporte adequado para o voo ou transporte rodoviário considerando o peso e a distância.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Declaração de declaração de declaração",
+              "description": "Organize e classifique os pertences que deseja levar para a mudança.",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Atualizar dados de energia e internet",
+              "description": "Transferir as informações de energia e internet para a nova residência.",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Pacote de coisas não essenciais",
+              "description": "Pacote as coisas que não precisam ser levadas para a mudança, como roupas de cama e toalhas.",
+              "dueDate": "2026-11-02"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 2,
+            "days8to14": 2,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 59,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 0,
+            "diversityScore": 25
+          },
+          "qualityScore": 77,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 12,
+            "relevance": 0,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 7666,
+          "tokensPerSec": 39.6,
+          "suggestions": [
+            {
+              "title": "Reservar transporte para a mudança",
+              "description": "Reservar um veículo ou serviço de transporte adequado para transportar o material do quarto universitário.",
+              "dueDate": "2026-11-10"
+            },
+            {
+              "title": "Declutar e organizar o quarto universitário",
+              "description": "Separar e organizar os itens que serão levados para o novo quarto e aqueles que serão devolvidos ou doados.",
+              "dueDate": "2026-11-05"
+            },
+            {
+              "title": "Preparar e fazer uma cópia de segurança dos dados digitais",
+              "description": "Preparar e fazer uma cópia de segurança de todos os dados digitais importantes, como arquivos de estudo e fotos.",
+              "dueDate": "2026-11-07"
+            },
+            {
+              "title": "Pacote de itens essenciais para o novo quarto",
+              "description": "Pacote de itens essenciais para o novo quarto, como lençóis, toalhas, e outros itens de higiene pessoal.",
+              "dueDate": "2026-11-12"
+            }
+          ],
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 3,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 71.16666666666666,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 4.166666666666666,
+            "diversityScore": 25
+          },
+          "qualityScore": 83.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 16,
+            "relevance": 2.5,
+            "diversity": 15
+          }
+        }
+      ]
+    },
+    {
+      "scenarioId": 5,
+      "name": "Home Office / Equipamentos de TI",
+      "referenceDate": "2026-10-31",
+      "movingDate": "2027-01-15",
+      "runsCount": 3,
+      "latencyMedian": 10559,
+      "latencyMean": 10991,
+      "tokensPerSecMean": "38.1",
+      "legacyScoreMean": 73.9,
+      "qualityScoreMean": 81.4,
+      "pctInLast7DaysMean": 44.4,
+      "beforeReferenceCountTotal": 0,
+      "invalidDateCountTotal": 0,
+      "afterMovingCountTotal": 0,
+      "runs": [
+        {
+          "ok": true,
+          "durationMs": 10559,
+          "tokensPerSec": 38.3,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para distância e volume",
+              "description": "Reserve um caminhão ou caminhonete para transportar todos os pertences da mudança.",
+              "dueDate": "2027-01-05"
+            },
+            {
+              "title": "Declutar e organizar pertences não essenciais",
+              "description": "Separe e organize os pertences que não serão levados para a nova casa.",
+              "dueDate": "2027-01-07"
+            },
+            {
+              "title": "Realizar cópias digitais de todos os arquivos e dados importantes",
+              "description": "Faça cópias de todos os arquivos de trabalho e dados importantes para backup.",
+              "dueDate": "2027-01-03"
+            },
+            {
+              "title": "Pacote de pertences não essenciais",
+              "description": "Pacote e armazene os pertences que não serão levados para a nova casa.",
+              "dueDate": "2027-01-09"
+            },
+            {
+              "title": "Contatar fornecedores de internet e energia para transferência",
+              "description": "Contate a empresa de internet e energia para transferir suas contas para a nova residência.",
+              "dueDate": "2027-01-08"
+            },
+            {
+              "title": "Pacote de pertences essenciais",
+              "description": "Pacote e armazene os pertences essenciais que serão levados para a nova casa.",
+              "dueDate": "2027-01-12"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 3,
+          "beforeLast7Days": 3,
+          "pctInLast7Days": 50,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 3,
+            "last7days": 3
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 1,
+          "legacyScore": 66.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 77.28571428571429,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 12,
+            "relevance": 4.285714285714286,
+            "diversity": 11
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 11918,
+          "tokensPerSec": 37,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para o volume de carga",
+              "description": "Reservar um caminhão ou veículo para transportar o equipamento e mobiliário do escritório",
+              "dueDate": "2027-01-01"
+            },
+            {
+              "title": "Realizar cópias de segurança de dados e transferir para o novo local",
+              "description": "Realizar cópias de segurança de todos os dados importantes do escritório e transferi-los para o novo local",
+              "dueDate": "2027-01-05"
+            },
+            {
+              "title": "Declutar o escritório e separar itens para doação ou descarte",
+              "description": "Separar e organizar itens para doação ou descarte, incluindo equipamentos usados e não funcionais",
+              "dueDate": "2027-01-08"
+            },
+            {
+              "title": "Transferir as contas de internet e água para o novo endereço",
+              "description": "Contatar a empresa de internet e água para transferir as contas para o novo endereço em Lisboa",
+              "dueDate": "2027-01-10"
+            },
+            {
+              "title": "Pacote de monitor e computador com proteção adicional",
+              "description": "Pacote de proteção para monitor e computador, incluindo embalagens especiais e adesivos de proteção",
+              "dueDate": "2027-01-12"
+            },
+            {
+              "title": "Pacote de armazenamento para itens pessoais e documentos importantes",
+              "description": "Pacote de armazenamento para itens pessoais e documentos importantes, incluindo cópias de segurança de documentos",
+              "dueDate": "2027-01-14"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 2,
+          "pctInLast7Days": 66.66666666666666,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 2,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 83.42857142857143,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 22,
+            "dependencyOrder": 20,
+            "relevance": 6.428571428571428,
+            "diversity": 15
+          }
+        },
+        {
+          "ok": true,
+          "durationMs": 10496,
+          "tokensPerSec": 38.9,
+          "suggestions": [
+            {
+              "title": "Reservar transporte adequado para a distância e volume",
+              "description": "Reservar um caminhão ou um ônibus para transportar o escritório de tecnologia",
+              "dueDate": "2027-01-05"
+            },
+            {
+              "title": "Transferir e atualizar as contas de internet e água",
+              "description": "Transferir a internet e a água para o novo endereço e atualizar as informações",
+              "dueDate": "2027-01-03"
+            },
+            {
+              "title": "Pacote digital de backup e transferência",
+              "description": "Gerar e transferir todos os backups de dados digitais, incluindo arquivos de software e configurações de computador",
+              "dueDate": "2027-01-01"
+            },
+            {
+              "title": "Declaração de declaração de itens para transporte",
+              "description": "Listar todos os itens que serão transportados e que não serão transportados",
+              "dueDate": "2027-01-02"
+            },
+            {
+              "title": "Pacote de monitor e computador",
+              "description": "Pacote de proteção para monitor e computador, incluindo caixas de transporte adequadas",
+              "dueDate": "2027-01-04"
+            },
+            {
+              "title": "Final de preparação e inspeção",
+              "description": "Confeccionar uma mala de viagem pessoal com itens essenciais, fazer leitura de medição e inspecionar o novo apartamento",
+              "dueDate": "2027-01-13"
+            }
+          ],
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 16.666666666666664,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 5,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 69.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 83.42857142857143,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "dependencyOrder": 12,
+            "relevance": 6.428571428571428,
+            "diversity": 15
+          }
+        }
+      ]
+    }
+  ]
+}

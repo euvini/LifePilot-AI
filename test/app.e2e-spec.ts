@@ -521,6 +521,7 @@ describe('LifePilot API (e2e)', () => {
           origin: validPlan.origin,
           destination: validPlan.destination,
           movingDate: validPlan.movingDate,
+          referenceDate: expect.any(String),
           maxSuggestions: 5,
         });
 
@@ -832,6 +833,27 @@ describe('LifePilot API (e2e)', () => {
           .expect(400);
       });
 
+      it('should reject a task with dueDate before the referenceDate with 400', async () => {
+        const plan = await createPlan();
+
+        await request(app.getHttpServer())
+          .post(`/api/v1/moving-plans/${plan.id}/task-suggestions/accept`)
+          .send({
+            tasks: [
+              {
+                title: 'Tarefa no passado',
+                dueDate: '2020-01-01',
+              },
+            ],
+          })
+          .expect(400)
+          .expect(({ body }) => {
+            expect(body.message).toContain(
+              'não pode ser anterior à data de referência',
+            );
+          });
+      });
+
       it('should reject a task with dueDate after the movingDate with 400', async () => {
         const plan = await createPlan();
 
@@ -858,7 +880,9 @@ describe('LifePilot API (e2e)', () => {
   describe('unconfigured LLM_API_KEY integration', () => {
     it('boots normally, serves core endpoints, and returns 503 only when calling task-suggestions', async () => {
       const originalApiKey = process.env.LLM_API_KEY;
+      const originalProvider = process.env.LLM_PROVIDER;
       delete process.env.LLM_API_KEY;
+      delete process.env.LLM_PROVIDER;
 
       const unmockedModule = await Test.createTestingModule({
         imports: [AppModule],
@@ -906,6 +930,13 @@ describe('LifePilot API (e2e)', () => {
         await unmockedApp.close();
         if (originalApiKey !== undefined) {
           process.env.LLM_API_KEY = originalApiKey;
+        } else {
+          delete process.env.LLM_API_KEY;
+        }
+        if (originalProvider !== undefined) {
+          process.env.LLM_PROVIDER = originalProvider;
+        } else {
+          delete process.env.LLM_PROVIDER;
         }
       }
     });

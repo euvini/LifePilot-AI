@@ -25,10 +25,11 @@ Variáveis relevantes (valores ilustrativos em `.env.example`):
 | `DATABASE_URL` | PostgreSQL da aplicação |
 | `TEST_DATABASE_URL` | PostgreSQL isolado para e2e (nome da BD deve terminar em `_test`) |
 | `OBSERVE_APP_KEY` / `OBSERVE_APP_SECRET` | Telemetria NestJS Observe |
-| `LLM_API_KEY` | Chave da OpenAI para geração assistida de tarefas (opcional no boot, 503 se ausente ao chamar IA) |
-| `LLM_MODEL` | Modelo OpenAI (default `gpt-4o-mini`) |
-| `LLM_BASE_URL` | URL base do provedor (default `https://api.openai.com/v1`) |
-| `LLM_TIMEOUT_MS` | Timeout da requisição de IA em milissegundos (default `15000`) |
+| `LLM_PROVIDER` | Provedor de IA: `openai` (remoto) ou `ollama` (local, default `openai`) |
+| `LLM_API_KEY` | Chave da OpenAI (obrigatória apenas se `LLM_PROVIDER=openai`) |
+| `LLM_MODEL` | Modelo de IA (default `gpt-4o-mini` para OpenAI, `qwen2.5:3b` para Ollama) |
+| `LLM_BASE_URL` | URL base do provedor (`https://api.openai.com/v1` ou `http://localhost:11434`) |
+| `LLM_TIMEOUT_MS` | Timeout da requisição de IA em milissegundos (default `15000` OpenAI, `60000` Ollama) |
 
 ## PostgreSQL local (Docker Compose)
 
@@ -111,6 +112,14 @@ Prefixo global: `/api/v1`.
 - **Validação estrita de prazos:** Datas são validadas no formato real `YYYY-MM-DD` e nenhum prazo (`dueDate`) pode ser posterior à data da mudança (`movingDate`). Se não especificado, aceita-se `null`.
 - **Proteção contra injeção e isolamento:** Dados do plano (título, origem, destino) são tratados como não confiáveis; a IA não possui ferramentas, acesso ao banco ou permissões de escrita.
 - **Resiliência e tolerância:** Falta de `LLM_API_KEY` retorna `503` ao solicitar a funcionalidade sem impedir o boot da API. Timeouts (default 15s) retornam `504` e erros do provedor retornam `502` sem expor chaves, prompts internos ou stack traces.
+- **Suporte a Ollama Local (sem custos de API):**
+  - Configurando `LLM_PROVIDER=ollama`, a aplicação consome a API local do Ollama (`http://localhost:11434/api/chat`) com JSON Schema nativo e temperatura controlada.
+  - Não requer `LLM_API_KEY`. Se o serviço local estiver offline, retorna erro explícito `502 Bad Gateway` sem qualquer fallback silencioso para provedores pagos.
+  - Recomendado para ambientes com 8 GB de RAM: modelos leves como `qwen2.5:3b` ou `llama3.2:3b`.
+  - **Script de Avaliação de Qualidade:** Permite testar 5 cenários sintéticos de mudança com critérios automatizados de validade, ordem cronológica, relevância e não-duplicação (sem gravar na base de dados):
+    ```bash
+    node scripts/evaluate-suggestions.mjs
+    ```
 - **Rate limiting e controle de requisições:**
   - O endpoint de geração com IA (`POST /api/v1/moving-plans/:planId/task-suggestions`) possui limitação estrita de **5 requisições por minuto por IP** via `@nestjs/throttler`.
   - Requisições além do limite recebem resposta HTTP `429 Too Many Requests` com mensagem padronizada (`Limite de requisições excedido. Tente novamente em instantes.`) sem expor detalhes internos.
