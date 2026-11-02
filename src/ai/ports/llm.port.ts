@@ -3,6 +3,7 @@ export interface TaskSuggestionPromptInput {
   origin: string;
   destination: string;
   movingDate: string; // YYYY-MM-DD
+  referenceDate: string; // YYYY-MM-DD
   maxSuggestions: number;
 }
 

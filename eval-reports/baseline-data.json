@@ -1,0 +1,252 @@
+{
+  "capturedAt": "2026-10-29T19:29:38.088Z",
+  "model": "qwen2.5:3b",
+  "endpoint": "http://localhost:11434",
+  "results": [
+    {
+      "scenarioId": 1,
+      "name": "Urgente / Curto Prazo (T1 Local)",
+      "movingDate": "2026-11-10",
+      "durationMs": 13370,
+      "tokensPerSec": 36.6,
+      "legacyScore": 69,
+      "breakdown": {
+        "schemaScore": 25,
+        "orderScore": 9,
+        "relevanceScore": 10,
+        "diversityScore": 25
+      },
+      "temporalMetrics": {
+        "totalTasks": 5,
+        "datedTasks": 5,
+        "inLast7Days": 3,
+        "beforeLast7Days": 2,
+        "pctLast7Days": 60
+      },
+      "suggestions": [
+        {
+          "title": "Organizar e embalar roupas e pertences pessoais",
+          "description": "Organize roupas e pertences pessoais em embalagens adequadas e etiquetar-as.",
+          "dueDate": "2026-11-01"
+        },
+        {
+          "title": "Limpar e desinfetar a casa",
+          "description": "Limpe e desinfete todas as áreas da casa para garantir que não haja riscos de infecção durante o transporte.",
+          "dueDate": "2026-11-05"
+        },
+        {
+          "title": "Concluir a manutenção do apartamento",
+          "description": "Verifique e finalize qualquer manutenção necessária no apartamento para evitar problemas durante a mudança.",
+          "dueDate": "2026-11-03"
+        },
+        {
+          "title": "Organizar documentos e chaves",
+          "description": "Organize todos os documentos pessoais e chaves necessárias para a nova moradia.",
+          "dueDate": "2026-11-02"
+        },
+        {
+          "title": "Conferir e verificar todos os itens a serem levados",
+          "description": "Verifique a lista de itens a serem levados para garantir que não se esqueça de nada importante.",
+          "dueDate": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "scenarioId": 2,
+      "name": "Longa Distância Intermunicipal (Familiar T3)",
+      "movingDate": "2026-12-30",
+      "durationMs": 10554,
+      "tokensPerSec": 35.1,
+      "legacyScore": 75,
+      "breakdown": {
+        "schemaScore": 25,
+        "orderScore": 25,
+        "relevanceScore": 0,
+        "diversityScore": 25
+      },
+      "temporalMetrics": {
+        "totalTasks": 6,
+        "datedTasks": 1,
+        "inLast7Days": 1,
+        "beforeLast7Days": 0,
+        "pctLast7Days": 100
+      },
+      "suggestions": [
+        {
+          "title": "Reservar transporte de carga",
+          "description": "Reserve um caminhão ou ônibus para transportar a maioria dos móveis e pertences da casa.",
+          "dueDate": "2026-12-30"
+        },
+        {
+          "title": "Confeccionar uma lista de móveis e pertences",
+          "description": "Crie uma lista detalhada dos móveis e pertences que precisam ser transportados.",
+          "dueDate": null
+        },
+        {
+          "title": "Confeccionar uma lista de documentos e chaves",
+          "description": "Crie uma lista de todos os documentos pessoais e chaves que precisam ser transportados ou entregues.",
+          "dueDate": null
+        },
+        {
+          "title": "Confeccionar uma lista de itens de limpeza",
+          "description": "Crie uma lista de todos os itens de limpeza necessários para a limpeza da casa antes da mudança.",
+          "dueDate": null
+        },
+        {
+          "title": "Confeccionar uma lista de itens de higiene pessoal",
+          "description": "Crie uma lista de todos os itens de higiene pessoal que precisam ser transportados.",
+          "dueDate": null
+        },
+        {
+          "title": "Confeccionar uma lista de itens de alimentação",
+          "description": "Crie uma lista de todos os itens de alimentação que precisam ser transportados ou comprados após a mudança.",
+          "dueDate": null
+        }
+      ]
+    },
+    {
+      "scenarioId": 3,
+      "name": "Cuidados Especiais: Animais e Plantas",
+      "movingDate": "2026-12-10",
+      "durationMs": 8058,
+      "tokensPerSec": 35.1,
+      "legacyScore": 82,
+      "breakdown": {
+        "schemaScore": 25,
+        "orderScore": 25,
+        "relevanceScore": 7,
+        "diversityScore": 25
+      },
+      "temporalMetrics": {
+        "totalTasks": 5,
+        "datedTasks": 2,
+        "inLast7Days": 0,
+        "beforeLast7Days": 2,
+        "pctLast7Days": 0
+      },
+      "suggestions": [
+        {
+          "title": "Organizar transporte para cães",
+          "description": "Reservar transporte para os cães durante a mudança para Braga.",
+          "dueDate": null
+        },
+        {
+          "title": "Verificar condições do jardim",
+          "description": "Verificar se o jardim no destino está em condições de ser utilizado imediatamente.",
+          "dueDate": null
+        },
+        {
+          "title": "Conferir seguro de responsabilidade civil",
+          "description": "Garantir que o seguro de responsabilidade civil cobre a mudança para Braga.",
+          "dueDate": null
+        },
+        {
+          "title": "Organizar serviços de limpeza",
+          "description": "Contratar serviços de limpeza para a casa de origem antes da mudança.",
+          "dueDate": "2026-11-10"
+        },
+        {
+          "title": "Preparar documentos necessários",
+          "description": "Preparar todos os documentos necessários para a mudança, incluindo certificados de vacinação dos cães.",
+          "dueDate": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "scenarioId": 4,
+      "name": "Estudante / Quarto Individual (Baixo Volume)",
+      "movingDate": "2026-11-20",
+      "durationMs": 8294,
+      "tokensPerSec": 36,
+      "legacyScore": 59,
+      "breakdown": {
+        "schemaScore": 25,
+        "orderScore": 9,
+        "relevanceScore": 0,
+        "diversityScore": 25
+      },
+      "temporalMetrics": {
+        "totalTasks": 4,
+        "datedTasks": 4,
+        "inLast7Days": 1,
+        "beforeLast7Days": 3,
+        "pctLast7Days": 25
+      },
+      "suggestions": [
+        {
+          "title": "Organizar e embalar roupas de cama e toalhas",
+          "description": "Organize as roupas de cama e toalhas em sacolas ou caixas adequadas e comece a embalar-as.",
+          "dueDate": "2026-11-15"
+        },
+        {
+          "title": "Limpar e desinfetar armários e gabinetes",
+          "description": "Limpe e desinfete todos os armários e gabinetes para remover qualquer sujeira ou poeira.",
+          "dueDate": "2026-11-10"
+        },
+        {
+          "title": "Concluir a organização do escritório",
+          "description": "Organize todos os documentos e objetos pessoais do escritório em caixas adequadas.",
+          "dueDate": "2026-11-12"
+        },
+        {
+          "title": "Concluir a organização da cozinha",
+          "description": "Organize e embale todos os utensílios de cozinha e alimentos em caixas adequadas.",
+          "dueDate": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "scenarioId": 5,
+      "name": "Home Office / Equipamentos de TI",
+      "movingDate": "2027-01-15",
+      "durationMs": 8448,
+      "tokensPerSec": 38,
+      "legacyScore": 75,
+      "breakdown": {
+        "schemaScore": 25,
+        "orderScore": 25,
+        "relevanceScore": 0,
+        "diversityScore": 25
+      },
+      "temporalMetrics": {
+        "totalTasks": 6,
+        "datedTasks": 0,
+        "inLast7Days": 0,
+        "beforeLast7Days": 0,
+        "pctLast7Days": 0
+      },
+      "suggestions": [
+        {
+          "title": "Conferir a lista de itens a serem transportados",
+          "description": "Verificar se todos os itens para a mudança estão listados e confirmar a quantidade.",
+          "dueDate": null
+        },
+        {
+          "title": "Organizar documentos e recibos importantes",
+          "description": "Organizar todos os documentos e recibos importantes para a mudança.",
+          "dueDate": null
+        },
+        {
+          "title": "Contatar seguro para objetos de valor",
+          "description": "Contatar um seguro para objetos de valor que serão transportados.",
+          "dueDate": null
+        },
+        {
+          "title": "Reservar transporte de carga para escritório",
+          "description": "Reservar transporte adequado para transportar o escritório de tecnologia.",
+          "dueDate": null
+        },
+        {
+          "title": "Confeccionar lista de itens a serem entregues à nova residência",
+          "description": "Listar todos os itens que precisarão ser entregues à nova residência.",
+          "dueDate": null
+        },
+        {
+          "title": "Contatar prestadores de serviços para limpeza e instalação",
+          "description": "Contatar prestadores de serviços para limpeza e instalação do escritório de tecnologia.",
+          "dueDate": null
+        }
+      ]
+    }
+  ]
+}

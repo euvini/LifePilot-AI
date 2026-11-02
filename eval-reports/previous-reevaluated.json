@@ -1,0 +1,1428 @@
+[
+  {
+    "scenarioId": 1,
+    "name": "Urgente / Curto Prazo (T1 Local)",
+    "runs": [
+      {
+        "durationMs": 16963,
+        "tokensPerSec": 33.8,
+        "evalRes": {
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 5,
+          "beforeLast7Days": 0,
+          "pctInLast7Days": 100,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 5
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10,
+            "diversityScore": 25
+          },
+          "qualityScore": 94,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Água, luz ou internet rápida",
+                "Mala com itens dos primeiros dias"
+              ],
+              "missingDimensions": [
+                "Providenciar caixas e embalar"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar os pertences\"",
+                "\"Packing\" em: \"Packing de pertences não essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "contas de água",
+                "contas de agua"
+              ],
+              "totalViolations": 2
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 8826,
+        "tokensPerSec": 36,
+        "evalRes": {
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 1,
+          "pctInLast7Days": 80,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 1,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 90,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 15,
+            "diversityScore": 25
+          },
+          "qualityScore": 97,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Providenciar caixas e embalar",
+                "Água, luz ou internet rápida",
+                "Mala com itens dos primeiros dias"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar o apartamento em Lisboa (Alfama)\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais para o novo endereço\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "doar",
+                "internet",
+                "embalar"
+              ],
+              "totalViolations": 2
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 11004,
+        "tokensPerSec": 37,
+        "evalRes": {
+          "scenarioId": 1,
+          "name": "Urgente / Curto Prazo (T1 Local)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 1,
+          "pctInLast7Days": 80,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 1,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10,
+            "diversityScore": 25
+          },
+          "qualityScore": 92.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 0.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Transporte/Frete rápido",
+                "Desapego / Doação rápida",
+                "Água, luz ou internet rápida",
+                "Mala com itens dos primeiros dias"
+              ],
+              "missingDimensions": [
+                "Providenciar caixas e embalar"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 0.5,
+              "ptBrScorePct": 25,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar os pertences para a mudança\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais para o novo endereço\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais para o novo endereço (segunda parte)\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "internet"
+              ],
+              "totalViolations": 3
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenarioId": 2,
+    "name": "Longa Distância Intermunicipal (Familiar T3)",
+    "runs": [
+      {
+        "durationMs": 11391,
+        "tokensPerSec": 37.6,
+        "evalRes": {
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 3,
+            "days15to30": 3,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 85.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 87.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 8,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 0.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Inventário de bens e contrato",
+                "Transferência de água, luz e internet"
+              ],
+              "missingDimensions": [
+                "Desapego e doação de itens volumosos",
+                "Embalagem planejada por cômodos"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 8,
+              "genericTasks": [
+                "Finalizar preparação"
+              ],
+              "outOfContextTasks": [],
+              "genericCount": 1,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 0.5,
+              "ptBrScorePct": 25,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar as coisas desnecessárias\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens não essenciais\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 3
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 10373,
+        "tokensPerSec": 38.4,
+        "evalRes": {
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 6,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 5,
+            "days15to30": 1,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 1,
+          "legacyScore": 70.57142857142857,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 3.571428571428571,
+            "diversityScore": 25
+          },
+          "qualityScore": 81,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 6,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 6.5,
+            "ptBrQuality": 0.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 6,
+              "coveragePct": 40,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Transferência de água, luz e internet"
+              ],
+              "missingDimensions": [
+                "Inventário de bens e contrato",
+                "Desapego e doação de itens volumosos",
+                "Embalagem planejada por cômodos"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 6.5,
+              "duplicateCount": 1,
+              "duplicatePairs": [
+                {
+                  "taskA": "Packing Não-Essenciais",
+                  "taskB": "Packing Essenciais",
+                  "reason": "Alta sobreposição semântica (91%)"
+                }
+              ]
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 0.5,
+              "ptBrScorePct": 25,
+              "anglicismsFound": [
+                "\"Decluttering\" em: \"Decluttering e Digitalização\"",
+                "\"Packing\" em: \"Packing Não-Essenciais\"",
+                "\"Packing\" em: \"Packing Essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "internet"
+              ],
+              "totalViolations": 3
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 10044,
+        "tokensPerSec": 38.5,
+        "evalRes": {
+          "scenarioId": 2,
+          "name": "Longa Distância Intermunicipal (Familiar T3)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-30",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 16.666666666666664,
+          "windows": {
+            "beyond30d": 5,
+            "days15to30": 0,
+            "days8to14": 0,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 66.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 86.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 8,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 10,
+            "ptBrQuality": 0.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Cotação de transportadora/caminhão",
+                "Inventário de bens e contrato",
+                "Desapego e doação de itens volumosos",
+                "Transferência de água, luz e internet"
+              ],
+              "missingDimensions": [
+                "Embalagem planejada por cômodos"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 8,
+              "genericTasks": [
+                "Finalizar a mudança"
+              ],
+              "outOfContextTasks": [],
+              "genericCount": 1,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 0.5,
+              "ptBrScorePct": 25,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar o armário\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens para o novo lar\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [],
+              "totalViolations": 3
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenarioId": 3,
+    "name": "Cuidados Especiais: Animais e Plantas",
+    "runs": [
+      {
+        "durationMs": 9522,
+        "tokensPerSec": 38.7,
+        "evalRes": {
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 74.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 88,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 7.5,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 10,
+            "ptBrQuality": 3.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Caixa de transporte e cuidados com os pets",
+                "Caminhão de mudança ou frete residencial",
+                "Embalagem de pertences e caixas"
+              ],
+              "missingDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Transporte e cuidados com plantas/jardim"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 7.5,
+              "genericTasks": [],
+              "outOfContextTasks": [
+                "Pacote digital e backup de dispositivos eletrônicos (contexto inadequado: \"backup\")"
+              ],
+              "genericCount": 0,
+              "outOfContextCount": 1
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 3.5,
+              "ptBrScorePct": 75,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar pertences não essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [],
+              "totalViolations": 1
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 9258,
+        "tokensPerSec": 36.9,
+        "evalRes": {
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 3,
+          "semanticDuplicates": 0,
+          "legacyScore": 58.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 1,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 88.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 12,
+            "taskSpecificity": 7.5,
+            "dependencyCoherence": 4,
+            "semanticDiversity": 10,
+            "ptBrQuality": 5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Caixa de transporte e cuidados com os pets",
+                "Caminhão de mudança ou frete residencial",
+                "Embalagem de pertences e caixas"
+              ],
+              "missingDimensions": [
+                "Transporte e cuidados com plantas/jardim"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 7.5,
+              "genericTasks": [],
+              "outOfContextTasks": [
+                "Pacote de tecnologia e backup digital (contexto inadequado: \"backup\")"
+              ],
+              "genericCount": 0,
+              "outOfContextCount": 1
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 4,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 3
+            },
+            "ptBrQuality": {
+              "score": 5,
+              "ptBrScorePct": 100,
+              "anglicismsFound": [],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "doar",
+                "internet"
+              ],
+              "totalViolations": 0
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 9664,
+        "tokensPerSec": 35.2,
+        "evalRes": {
+          "scenarioId": 3,
+          "name": "Cuidados Especiais: Animais e Plantas",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-12-10",
+          "taskCount": 5,
+          "datedCount": 5,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 5,
+            "days8to14": 0,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 3,
+          "semanticDuplicates": 0,
+          "legacyScore": 58.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 1,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 90,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 7.5,
+            "dependencyCoherence": 4,
+            "semanticDiversity": 10,
+            "ptBrQuality": 3.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Consulta veterinária e vacinas dos cães",
+                "Caixa de transporte e cuidados com os pets",
+                "Transporte e cuidados com plantas/jardim",
+                "Caminhão de mudança ou frete residencial",
+                "Embalagem de pertences e caixas"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 7.5,
+              "genericTasks": [],
+              "outOfContextTasks": [
+                "Pacote de digitalização e backup (contexto inadequado: \"backup\")"
+              ],
+              "genericCount": 0,
+              "outOfContextCount": 1
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 4,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 3
+            },
+            "ptBrQuality": {
+              "score": 3.5,
+              "ptBrScorePct": 75,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar pertences desnecessários\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "doação",
+                "doacao",
+                "contas de água",
+                "contas de agua",
+                "internet"
+              ],
+              "totalViolations": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenarioId": 4,
+    "name": "Estudante / Quarto Individual (Baixo Volume)",
+    "runs": [
+      {
+        "durationMs": 7481,
+        "tokensPerSec": 36.6,
+        "evalRes": {
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 3,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 0,
+          "legacyScore": 79.16666666666666,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 4.166666666666666,
+            "diversityScore": 25
+          },
+          "qualityScore": 93.3,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 11.3,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 10,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 11.3,
+              "coveragePct": 75,
+              "matchedDimensions": [
+                "Doação de livros, roupas e desapego",
+                "Frete pequeno porte / carreto / van",
+                "Embalagem em malas e caixas"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar pertences não essenciais\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens não essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "embalar"
+              ],
+              "totalViolations": 2
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 6984,
+        "tokensPerSec": 37.6,
+        "evalRes": {
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 2,
+            "days8to14": 2,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 59,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 0,
+            "diversityScore": 25
+          },
+          "qualityScore": 79.8,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 3.8,
+            "taskSpecificity": 8,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 10,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 3.8,
+              "coveragePct": 25,
+              "matchedDimensions": [
+                "Frete pequeno porte / carreto / van"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto",
+                "Doação de livros, roupas e desapego",
+                "Embalagem em malas e caixas"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 8,
+              "genericTasks": [
+                "Declaração de declaração de declaração"
+              ],
+              "outOfContextTasks": [],
+              "genericCount": 1,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declaração de declaração\" em: \"Declaração de declaração de declaração\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de coisas não essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "internet"
+              ],
+              "totalViolations": 2
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 7666,
+        "tokensPerSec": 39.6,
+        "evalRes": {
+          "scenarioId": 4,
+          "name": "Estudante / Quarto Individual (Baixo Volume)",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2026-11-20",
+          "taskCount": 4,
+          "datedCount": 4,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 0,
+          "beforeLast7Days": 4,
+          "pctInLast7Days": 0,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 1,
+            "days8to14": 3,
+            "last7days": 0
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 1,
+          "semanticDuplicates": 0,
+          "legacyScore": 71.16666666666666,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 17,
+            "relevanceScore": 4.166666666666666,
+            "diversityScore": 25
+          },
+          "qualityScore": 87.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 7.5,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 8,
+            "semanticDiversity": 10,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 7.5,
+              "coveragePct": 50,
+              "matchedDimensions": [
+                "Doação de livros, roupas e desapego",
+                "Frete pequeno porte / carreto / van"
+              ],
+              "missingDimensions": [
+                "Vistoria e devolução de chaves do quarto",
+                "Embalagem em malas e caixas"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 8,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 1
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar o quarto universitário\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de itens essenciais para o novo quarto\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [],
+              "totalViolations": 2
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenarioId": 5,
+    "name": "Home Office / Equipamentos de TI",
+    "runs": [
+      {
+        "durationMs": 10559,
+        "tokensPerSec": 38.3,
+        "evalRes": {
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 3,
+          "beforeLast7Days": 3,
+          "pctInLast7Days": 50,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 3,
+            "last7days": 3
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 1,
+          "legacyScore": 66.14285714285714,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 7.142857142857142,
+            "diversityScore": 25
+          },
+          "qualityScore": 82,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 9,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 6.5,
+            "ptBrQuality": 0.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 9,
+              "coveragePct": 60,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Agendamento e transferência rápida de internet",
+                "Contratação de caminhão ou frete seguro"
+              ],
+              "missingDimensions": [
+                "Proteção de computadores, monitores e cabos",
+                "Embalagem dos itens do escritório"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 6.5,
+              "duplicateCount": 1,
+              "duplicatePairs": [
+                {
+                  "taskA": "Pacote de pertences não essenciais",
+                  "taskB": "Pacote de pertences essenciais",
+                  "reason": "Alta sobreposição semântica (89%)"
+                }
+              ]
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 0.5,
+              "ptBrScorePct": 25,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar e organizar pertences não essenciais\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de pertences não essenciais\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de pertences essenciais\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "internet"
+              ],
+              "totalViolations": 3
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 11918,
+        "tokensPerSec": 37,
+        "evalRes": {
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 4,
+          "beforeLast7Days": 2,
+          "pctInLast7Days": 66.66666666666666,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 2,
+            "last7days": 4
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 0,
+          "semanticDuplicates": 1,
+          "legacyScore": 85.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 25,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 82.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 22,
+            "contextualRelevance": 12,
+            "taskSpecificity": 10,
+            "dependencyCoherence": 10,
+            "semanticDiversity": 6.5,
+            "ptBrQuality": 2
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 12,
+              "coveragePct": 80,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Proteção de computadores, monitores e cabos",
+                "Agendamento e transferência rápida de internet",
+                "Contratação de caminhão ou frete seguro"
+              ],
+              "missingDimensions": [
+                "Embalagem dos itens do escritório"
+              ]
+            },
+            "taskSpecificity": {
+              "score": 10,
+              "genericTasks": [],
+              "outOfContextTasks": [],
+              "genericCount": 0,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 6.5,
+              "duplicateCount": 1,
+              "duplicatePairs": [
+                {
+                  "taskA": "Realizar cópias de segurança de dados e transferir para o novo local",
+                  "taskB": "Pacote de armazenamento para itens pessoais e documentos importantes",
+                  "reason": "Mesma ação canônica duplicada (BACKUP_DIGITAL)"
+                }
+              ]
+            },
+            "dependencyCoherence": {
+              "score": 10,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 0
+            },
+            "ptBrQuality": {
+              "score": 2,
+              "ptBrScorePct": 50,
+              "anglicismsFound": [
+                "\"Declutar\" em: \"Declutar o escritório e separar itens para doação ou descarte\"",
+                "Uso de \"pacote\" como verbo/prefixo em: \"Pacote de armazenamento para itens pessoais e documentos importantes\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "doação",
+                "doacao",
+                "internet"
+              ],
+              "totalViolations": 2
+            }
+          }
+        }
+      },
+      {
+        "durationMs": 10496,
+        "tokensPerSec": 38.9,
+        "evalRes": {
+          "scenarioId": 5,
+          "name": "Home Office / Equipamentos de TI",
+          "referenceDate": "2026-10-31",
+          "movingDate": "2027-01-15",
+          "taskCount": 6,
+          "datedCount": 6,
+          "beforeReferenceCount": 0,
+          "afterMovingCount": 0,
+          "invalidDateCount": 0,
+          "inLast7Days": 1,
+          "beforeLast7Days": 5,
+          "pctInLast7Days": 16.666666666666664,
+          "windows": {
+            "beyond30d": 0,
+            "days15to30": 0,
+            "days8to14": 5,
+            "last7days": 1
+          },
+          "dependencyInversions": 0,
+          "arrayInversions": 2,
+          "semanticDuplicates": 0,
+          "legacyScore": 69.71428571428572,
+          "legacyBreakdown": {
+            "schemaScore": 25,
+            "orderScore": 9,
+            "relevanceScore": 10.714285714285714,
+            "diversityScore": 25
+          },
+          "qualityScore": 92.5,
+          "qualityBreakdown": {
+            "validity": 20,
+            "temporalDistribution": 30,
+            "contextualRelevance": 15,
+            "taskSpecificity": 8,
+            "dependencyCoherence": 6,
+            "semanticDiversity": 10,
+            "ptBrQuality": 3.5
+          },
+          "metrics": {
+            "contextualRelevance": {
+              "score": 15,
+              "coveragePct": 100,
+              "matchedDimensions": [
+                "Backup digital e cópia de segurança de dados",
+                "Proteção de computadores, monitores e cabos",
+                "Agendamento e transferência rápida de internet",
+                "Contratação de caminhão ou frete seguro",
+                "Embalagem dos itens do escritório"
+              ],
+              "missingDimensions": []
+            },
+            "taskSpecificity": {
+              "score": 8,
+              "genericTasks": [
+                "Declaração de declaração de itens para transporte"
+              ],
+              "outOfContextTasks": [],
+              "genericCount": 1,
+              "outOfContextCount": 0
+            },
+            "semanticDuplication": {
+              "score": 10,
+              "duplicateCount": 0,
+              "duplicatePairs": []
+            },
+            "dependencyCoherence": {
+              "score": 6,
+              "dependencyInversions": 0,
+              "inversionDetails": [],
+              "arrayInversions": 2
+            },
+            "ptBrQuality": {
+              "score": 3.5,
+              "ptBrScorePct": 75,
+              "anglicismsFound": [
+                "\"Declaração de declaração\" em: \"Declaração de declaração de itens para transporte\""
+              ],
+              "europeanTermsFound": [],
+              "inappropriateFound": [],
+              "recommendedTermsFound": [
+                "internet"
+              ],
+              "totalViolations": 1
+            }
+          }
+        }
+      }
+    ]
+  }
+]

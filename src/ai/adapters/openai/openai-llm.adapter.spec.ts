@@ -14,6 +14,7 @@ describe('OpenAiLlmAdapter', () => {
     planTitle: 'Mudança para Lisboa',
     origin: 'Porto',
     destination: 'Lisboa',
+    referenceDate: '2026-10-31',
     movingDate: '2026-12-01',
     maxSuggestions: 5,
   };
@@ -82,8 +83,63 @@ describe('OpenAiLlmAdapter', () => {
     expect(parsedBody.response_format.type).toBe('json_schema');
     expect(parsedBody.messages[0].role).toBe('system');
     expect(parsedBody.messages[0].content).toContain('Security Policy');
+    expect(parsedBody.messages[0].content).toContain(
+      'referenceDate <= dueDate <= movingDate',
+    );
     expect(parsedBody.messages[1].role).toBe('user');
     expect(parsedBody.messages[1].content).toContain(sampleInput.planTitle);
+    expect(parsedBody.messages[1].content).toContain(
+      '"referenceDate": "2026-10-31"',
+    );
+    expect(parsedBody.messages[1].content).toContain(
+      '"movingDate": "2026-12-01"',
+    );
+  });
+
+  it('should instruct the model to use natural Brazilian Portuguese (PT-BR) with Brazilian moving terminology', async () => {
+    const rawSuggestions = [
+      {
+        title: 'Contratar caminhão de mudança',
+        description: 'Cotar com 3 empresas locais',
+        dueDate: '2026-11-15',
+      },
+    ];
+
+    const mockFetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: vi.fn().mockResolvedValue({
+        choices: [
+          {
+            message: {
+              content: JSON.stringify({ suggestions: rawSuggestions }),
+            },
+          },
+        ],
+      }),
+    });
+    vi.stubGlobal('fetch', mockFetch);
+
+    await adapter.generateTaskSuggestions(sampleInput);
+
+    const [, options] = mockFetch.mock.calls[0];
+    const parsedBody = JSON.parse(options.body as string);
+    const systemPrompt = parsedBody.messages[0].content;
+
+    expect(systemPrompt).toContain('Brazilian Portuguese - PT-BR');
+    expect(systemPrompt).toContain('Never use European Portuguese');
+    expect(systemPrompt).toContain('caminhão de mudança');
+    expect(systemPrompt).toContain('frete');
+    expect(systemPrompt).toContain('transportadora');
+    expect(systemPrompt).toContain('caixas de papelão');
+    expect(systemPrompt).toContain('fita adesiva');
+    expect(systemPrompt).toContain('desapegar de itens');
+    expect(systemPrompt).toContain('separar itens para doação');
+    expect(systemPrompt).toContain('contas de água, luz e internet');
+    expect(systemPrompt).toContain('condomínio');
+    expect(systemPrompt).toContain('embalar os pertences');
+    expect(systemPrompt).toContain('carrinha');
+    expect(systemPrompt).toContain('declutar');
   });
 
   it('should throw GatewayTimeoutException on fetch timeout', async () => {
