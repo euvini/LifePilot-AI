@@ -21,7 +21,7 @@ Variáveis relevantes (valores ilustrativos em `.env.example`):
 
 | Variável | Uso |
 |----------|-----|
-| `PORT` | Porta HTTP (default `3000`) |
+| `PORT` | Porta HTTP (default `3333`) |
 | `DATABASE_URL` | PostgreSQL da aplicação |
 | `TEST_DATABASE_URL` | PostgreSQL isolado para e2e (nome da BD deve terminar em `_test`) |
 | `OBSERVE_APP_KEY` / `OBSERVE_APP_SECRET` | Telemetria NestJS Observe |
