@@ -2,6 +2,7 @@ import type { MovingPlan as MovingPlanRecord } from '../generated/prisma/client.
 
 export interface MovingPlanResponse {
   id: string;
+  userId?: string | null;
   title: string;
   origin: string;
   destination: string;
@@ -28,7 +29,7 @@ export function parseMovingDateInput(movingDate: string): Date {
 export function mapMovingPlanToResponse(
   plan: MovingPlanRecord,
 ): MovingPlanResponse {
-  return {
+  const response: MovingPlanResponse = {
     id: plan.id,
     title: plan.title,
     origin: plan.origin,
@@ -37,4 +38,10 @@ export function mapMovingPlanToResponse(
     createdAt: toIsoDateTimeString(plan.createdAt),
     updatedAt: toIsoDateTimeString(plan.updatedAt),
   };
+
+  if ('userId' in plan && plan.userId !== undefined && plan.userId !== null) {
+    response.userId = plan.userId;
+  }
+
+  return response;
 }

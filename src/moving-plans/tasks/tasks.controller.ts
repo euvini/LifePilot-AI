@@ -8,11 +8,14 @@ import {
   ParseUUIDPipe,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '../../auth/guards/auth.guard.js';
 import { CreateTaskDto } from './dto/create-task.dto.js';
 import { UpdateTaskDto } from './dto/update-task.dto.js';
 import { TasksService } from './tasks.service.js';
 
+@UseGuards(AuthGuard)
 @Controller('moving-plans/:planId/tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}

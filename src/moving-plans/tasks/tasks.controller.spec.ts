@@ -1,5 +1,6 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
+import { AuthGuard } from '../../auth/guards/auth.guard.js';
 import { TaskStatus } from '../../generated/prisma/client.js';
 import { TasksController } from './tasks.controller.js';
 import { TasksService } from './tasks.service.js';
@@ -40,7 +41,10 @@ describe('TasksController', () => {
           useValue: tasksService,
         },
       ],
-    }).compile();
+    })
+      .overrideGuard(AuthGuard)
+      .useValue({ canActivate: () => true })
+      .compile();
 
     controller = module.get(TasksController);
   });

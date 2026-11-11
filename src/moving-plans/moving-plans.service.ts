@@ -11,9 +11,13 @@ import {
 export class MovingPlansService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(dto: CreateMovingPlanDto): Promise<MovingPlanResponse> {
+  async create(
+    dto: CreateMovingPlanDto,
+    userId?: string,
+  ): Promise<MovingPlanResponse> {
     const plan = await this.prisma.movingPlan.create({
       data: {
+        ...(userId ? { userId } : {}),
         title: dto.title,
         origin: dto.origin,
         destination: dto.destination,
@@ -24,18 +28,24 @@ export class MovingPlansService {
     return mapMovingPlanToResponse(plan);
   }
 
-  async findAll(): Promise<MovingPlanResponse[]> {
+  async findAll(userId?: string): Promise<MovingPlanResponse[]> {
+    const where = userId ? { userId } : {};
     const plans = await this.prisma.movingPlan.findMany({
+      where,
       orderBy: { createdAt: 'asc' },
     });
 
     return plans.map(mapMovingPlanToResponse);
   }
 
-  async findOne(id: string): Promise<MovingPlanResponse> {
-    const plan = await this.prisma.movingPlan.findUnique({
-      where: { id },
-    });
+  async findOne(id: string, userId?: string): Promise<MovingPlanResponse> {
+    const plan = userId
+      ? await this.prisma.movingPlan.findFirst({
+          where: { id, userId },
+        })
+      : await this.prisma.movingPlan.findUnique({
+          where: { id },
+        });
 
     if (!plan) {
       throw new NotFoundException('Plano de mudança não encontrado');
@@ -44,18 +54,23 @@ export class MovingPlansService {
     return mapMovingPlanToResponse(plan);
   }
 
-  async remove(id: string): Promise<void> {
-    const plan = await this.prisma.movingPlan.findUnique({
-      where: { id },
-      select: { id: true },
-    });
+  async remove(id: string, userId?: string): Promise<void> {
+    const plan = userId
+      ? await this.prisma.movingPlan.findFirst({
+          where: { id, userId },
+          select: { id: true },
+        })
+      : await this.prisma.movingPlan.findUnique({
+          where: { id },
+          select: { id: true },
+        });
 
     if (!plan) {
       throw new NotFoundException('Plano de mudança não encontrado');
     }
 
     await this.prisma.movingPlan.delete({
-      where: { id },
+      where: { id: plan.id },
     });
   }
 }

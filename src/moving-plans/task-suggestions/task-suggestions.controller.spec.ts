@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ThrottlerGuard } from '@nestjs/throttler';
+import { AuthGuard } from '../../auth/guards/auth.guard.js';
 import { TaskStatus } from '../../generated/prisma/client.js';
 import { TaskResponse } from '../tasks/task.mapper.js';
 import { TaskSuggestionsResponse } from './dto/task-suggestions-response.dto.js';
@@ -29,6 +30,8 @@ describe('TaskSuggestionsController', () => {
       ],
     })
       .overrideGuard(ThrottlerGuard)
+      .useValue({ canActivate: () => true })
+      .overrideGuard(AuthGuard)
       .useValue({ canActivate: () => true })
       .compile();
 

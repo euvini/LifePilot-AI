@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 import { minutes, normalizeIp, ThrottlerModule } from '@nestjs/throttler';
 import { AiModule } from './ai/ai.module.js';
+import { AuthModule } from './auth/auth.module.js';
 import { HealthModule } from './health/health.module.js';
 import { MovingPlansModule } from './moving-plans/moving-plans.module.js';
 import { PrismaModule } from './prisma/prisma.module.js';
@@ -42,6 +43,7 @@ export const throttlerTracker = (req: Record<string, any>): string => {
       serviceId: 'LifePilot-AI',
     }),
     PrismaModule,
+    AuthModule,
     AiModule,
     HealthModule,
     MovingPlansModule,

@@ -49,6 +49,8 @@ describe('TaskSuggestionsService', () => {
   };
 
   beforeEach(async () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-10-29T12:00:00.000Z'));
     vi.clearAllMocks();
     prismaMock.movingPlan.findUnique.mockResolvedValue(planRecord);
     generateTaskSuggestionsMock.mockResolvedValue(rawSuggestions);
@@ -69,6 +71,10 @@ describe('TaskSuggestionsService', () => {
     }).compile();
 
     service = module.get(TaskSuggestionsService);
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   describe('generateSuggestions', () => {
