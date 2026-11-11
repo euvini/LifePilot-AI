@@ -1,7 +1,9 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
+  HttpCode,
   Param,
   ParseUUIDPipe,
   Post,
@@ -26,5 +28,11 @@ export class MovingPlansController {
   @Get(':id')
   findOne(@Param('id', ParseUUIDPipe) id: string) {
     return this.movingPlansService.findOne(id);
+  }
+
+  @Delete(':id')
+  @HttpCode(204)
+  remove(@Param('id', ParseUUIDPipe) id: string) {
+    return this.movingPlansService.remove(id);
   }
 }

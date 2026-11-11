@@ -32,6 +32,7 @@ describe('MovingPlansController', () => {
     create: vi.fn(),
     findAll: vi.fn(),
     findOne: vi.fn(),
+    remove: vi.fn(),
   };
 
   beforeEach(async () => {
@@ -83,6 +84,23 @@ describe('MovingPlansController', () => {
     );
 
     await expect(controller.findOne(missingPlanId)).rejects.toThrow(
+      NotFoundException,
+    );
+  });
+
+  it('remove should delegate to the service', async () => {
+    movingPlansService.remove.mockResolvedValue(undefined);
+
+    await expect(controller.remove(planId)).resolves.toBeUndefined();
+    expect(movingPlansService.remove).toHaveBeenCalledWith(planId);
+  });
+
+  it('remove should propagate NotFoundException from the service', async () => {
+    movingPlansService.remove.mockRejectedValue(
+      new NotFoundException('Plano de mudança não encontrado'),
+    );
+
+    await expect(controller.remove(missingPlanId)).rejects.toThrow(
       NotFoundException,
     );
   });

@@ -29,6 +29,7 @@ describe('MovingPlansService', () => {
       create: vi.fn(),
       findMany: vi.fn(),
       findUnique: vi.fn(),
+      delete: vi.fn(),
     },
   };
 
@@ -135,5 +136,31 @@ describe('MovingPlansService', () => {
     await expect(
       service.findOne('00000000-0000-0000-0000-000000000000'),
     ).rejects.toThrow('Plano de mudança não encontrado');
+  });
+
+  it('remove should delete the plan when found', async () => {
+    prisma.movingPlan.findUnique.mockResolvedValue({ id: sampleRecord.id });
+    prisma.movingPlan.delete.mockResolvedValue(sampleRecord);
+
+    await expect(service.remove(sampleRecord.id)).resolves.toBeUndefined();
+    expect(prisma.movingPlan.findUnique).toHaveBeenCalledWith({
+      where: { id: sampleRecord.id },
+      select: { id: true },
+    });
+    expect(prisma.movingPlan.delete).toHaveBeenCalledWith({
+      where: { id: sampleRecord.id },
+    });
+  });
+
+  it('remove should throw NotFoundException when plan is missing', async () => {
+    prisma.movingPlan.findUnique.mockResolvedValue(null);
+
+    await expect(
+      service.remove('00000000-0000-0000-0000-000000000000'),
+    ).rejects.toBeInstanceOf(NotFoundException);
+    await expect(
+      service.remove('00000000-0000-0000-0000-000000000000'),
+    ).rejects.toThrow('Plano de mudança não encontrado');
+    expect(prisma.movingPlan.delete).not.toHaveBeenCalled();
   });
 });

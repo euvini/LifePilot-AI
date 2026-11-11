@@ -21,7 +21,7 @@ Variáveis relevantes (valores ilustrativos em `.env.example`):
 
 | Variável | Uso |
 |----------|-----|
-| `PORT` | Porta HTTP (default `3000`) |
+| `PORT` | Porta HTTP (default `3333`) |
 | `DATABASE_URL` | PostgreSQL da aplicação |
 | `TEST_DATABASE_URL` | PostgreSQL isolado para e2e (nome da BD deve terminar em `_test`) |
 | `OBSERVE_APP_KEY` / `OBSERVE_APP_SECRET` | Telemetria NestJS Observe |
@@ -86,6 +86,7 @@ Prefixo global: `/api/v1`.
 | POST | `/api/v1/moving-plans` | Criar plano |
 | GET | `/api/v1/moving-plans` | Listar planos |
 | GET | `/api/v1/moving-plans/:id` | Obter plano |
+| DELETE | `/api/v1/moving-plans/:id` | Eliminar plano (`204`) |
 | GET | `/api/v1/moving-plans/:planId/tasks` | Listar tarefas do plano |
 | POST | `/api/v1/moving-plans/:planId/tasks` | Criar tarefa |
 | GET | `/api/v1/moving-plans/:planId/tasks/:taskId` | Obter tarefa |
