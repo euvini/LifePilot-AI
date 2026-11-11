@@ -21,17 +21,22 @@ Variáveis relevantes (valores ilustrativos em `.env.example`):
 
 | Variável | Uso |
 |----------|-----|
+| `NODE_ENV` | Ambiente de execução (`development` ou `production`) |
 | `PORT` | Porta HTTP (default `3333`) |
-| `DATABASE_URL` | PostgreSQL da aplicação |
+| `CORS_ORIGINS` | Origens permitidas no CORS separadas por vírgula (ex.: `https://seu-app.vercel.app,http://localhost:3000`) |
+| `TRUST_PROXY` | Definir `1` quando atrás de proxy reverso confiável como o Render (default `0`) |
+| `DATABASE_URL` | PostgreSQL da aplicação (runtime; suporta pooler Supavisor porta `6543` ou `5432`) |
+| `DIRECT_URL` | Conexão direta ou Session Pooler (porta `5432`) usada pelo Prisma CLI nas migrations |
 | `TEST_DATABASE_URL` | PostgreSQL isolado para e2e (nome da BD deve terminar em `_test`) |
 | `OBSERVE_APP_KEY` / `OBSERVE_APP_SECRET` | Telemetria NestJS Observe |
-| `LLM_PROVIDER` | Provedor de IA: `openai` (remoto) ou `ollama` (local, default `openai`) |
+| `LLM_PROVIDER` | Provedor de IA: `openai` ou `ollama` (default `openai`) |
 | `LLM_API_KEY` | Chave da OpenAI (obrigatória apenas se `LLM_PROVIDER=openai`) |
-| `LLM_MODEL` | Modelo de IA (default `gpt-4o-mini` para OpenAI, `qwen2.5:3b` para Ollama) |
-| `LLM_BASE_URL` | URL base do provedor (`https://api.openai.com/v1` ou `http://localhost:11434`) |
+| `OLLAMA_API_KEY` | Chave de API do Ollama Cloud (usada quando `LLM_PROVIDER=ollama` com `https://ollama.com`) |
+| `LLM_MODEL` | Modelo de IA (ex.: `gpt-4o-mini` para OpenAI, `beam:cloud` para Ollama Cloud, `qwen2.5:3b` local) |
+| `LLM_BASE_URL` | URL base do provedor (`https://api.openai.com/v1`, `https://ollama.com` ou `http://localhost:11434`) |
 | `LLM_TIMEOUT_MS` | Timeout da requisição de IA em milissegundos (default `15000` OpenAI, `60000` Ollama) |
 | `SUPABASE_URL` | URL do projeto Supabase para autenticação |
-| `SUPABASE_ANON_KEY` | Chave pública (anon) do Supabase |
+| `SUPABASE_ANON_KEY` | Chave pública (`anon` / publishable) do Supabase |
 
 ## PostgreSQL local (Docker Compose)
 
@@ -152,18 +157,23 @@ npm run test:e2e
 
 Os e2e só limpam tabelas depois de validar que a URL é local e que o nome da base termina em `_test`.
 
-## Build
+## Build e Produção (Render + Supabase)
 
 ```bash
-npm run build
-```
+# Build de produção (executa prisma generate via prebuild + nest build)
+npm install --include=dev && npm run build
 
-(`prebuild` executa `prisma generate`.)
+# Aplicar migrations em produção (usa DIRECT_URL ou DATABASE_URL)
+npm run prisma:migrate:deploy
+
+# Iniciar servidor em produção (escuta em 0.0.0.0:$PORT)
+npm run start:prod
+```
 
 ## Observabilidade
 
 Ver [NestJS Observe](https://observe.nestjs.com). Ligação local: `npx @nestjs/observe link`.
 
-## Nota de segurança
+## Autenticação e Segurança
 
-Esta fase de desenvolvimento **não tem autenticação**. Não exponha a API publicamente sem autenticação e autorização adequadas.
+Todas as rotas de `moving-plans`, `tasks` e `task-suggestions` são protegidas por `AuthGuard` via Supabase Auth (`Bearer <accessToken>`), com isolamento por `userId`. Em produção (`NODE_ENV=production`), configure obrigatoriamente `CORS_ORIGINS` com o domínio do frontend.
