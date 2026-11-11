@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AiModule } from '../ai/ai.module.js';
+import { AuthModule } from '../auth/auth.module.js';
 import { MovingPlansController } from './moving-plans.controller.js';
 import { MovingPlansService } from './moving-plans.service.js';
 import { TaskSuggestionsController } from './task-suggestions/task-suggestions.controller.js';
@@ -9,7 +10,7 @@ import { TasksController } from './tasks/tasks.controller.js';
 import { TasksService } from './tasks/tasks.service.js';
 
 @Module({
-  imports: [AiModule],
+  imports: [AiModule, AuthModule],
   controllers: [
     MovingPlansController,
     TasksController,

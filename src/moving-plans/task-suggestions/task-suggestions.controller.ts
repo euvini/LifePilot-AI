@@ -8,6 +8,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ThrottlerGuard } from '@nestjs/throttler';
+import { AuthGuard } from '../../auth/guards/auth.guard.js';
 import { TaskResponse } from '../tasks/task.mapper.js';
 import { AcceptTaskSuggestionsDto } from './dto/accept-task-suggestions.dto.js';
 import { GenerateTaskSuggestionsDto } from './dto/generate-task-suggestions.dto.js';
@@ -22,7 +23,7 @@ export class TaskSuggestionsController {
 
   @Post()
   @HttpCode(200)
-  @UseGuards(ThrottlerGuard)
+  @UseGuards(AuthGuard, ThrottlerGuard)
   generate(
     @Param('planId', ParseUUIDPipe) planId: string,
     @Body() dto: GenerateTaskSuggestionsDto,
@@ -32,6 +33,7 @@ export class TaskSuggestionsController {
 
   @Post('accept')
   @HttpCode(201)
+  @UseGuards(AuthGuard)
   accept(
     @Param('planId', ParseUUIDPipe) planId: string,
     @Body() dto: AcceptTaskSuggestionsDto,

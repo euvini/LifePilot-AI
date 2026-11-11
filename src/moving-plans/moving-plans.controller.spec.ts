@@ -1,5 +1,6 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
+import { AuthGuard } from '../auth/guards/auth.guard.js';
 import { CreateMovingPlanDto } from './dto/create-moving-plan.dto.js';
 import { MovingPlansController } from './moving-plans.controller.js';
 import { MovingPlanResponse } from './moving-plan.mapper.js';
@@ -46,7 +47,10 @@ describe('MovingPlansController', () => {
           useValue: movingPlansService,
         },
       ],
-    }).compile();
+    })
+      .overrideGuard(AuthGuard)
+      .useValue({ canActivate: () => true })
+      .compile();
 
     controller = module.get<MovingPlansController>(MovingPlansController);
   });

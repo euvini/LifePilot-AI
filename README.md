@@ -30,6 +30,8 @@ Variáveis relevantes (valores ilustrativos em `.env.example`):
 | `LLM_MODEL` | Modelo de IA (default `gpt-4o-mini` para OpenAI, `qwen2.5:3b` para Ollama) |
 | `LLM_BASE_URL` | URL base do provedor (`https://api.openai.com/v1` ou `http://localhost:11434`) |
 | `LLM_TIMEOUT_MS` | Timeout da requisição de IA em milissegundos (default `15000` OpenAI, `60000` Ollama) |
+| `SUPABASE_URL` | URL do projeto Supabase para autenticação |
+| `SUPABASE_ANON_KEY` | Chave pública (anon) do Supabase |
 
 ## PostgreSQL local (Docker Compose)
 
@@ -83,8 +85,13 @@ Prefixo global: `/api/v1`.
 | Método | Path | Descrição |
 |--------|------|-----------|
 | GET | `/api/v1/health` | Health check |
-| POST | `/api/v1/moving-plans` | Criar plano |
-| GET | `/api/v1/moving-plans` | Listar planos |
+| POST | `/api/v1/auth/signup` | Criar conta de usuário (`201`) |
+| POST | `/api/v1/auth/login` | Autenticar usuário e obter tokens (`200`) |
+| POST | `/api/v1/auth/refresh` | Renovar access token (`200`) |
+| GET | `/api/v1/auth/me` | Obter dados do usuário logado (requer Bearer token) |
+| POST | `/api/v1/auth/logout` | Encerrar sessão (`204`) |
+| POST | `/api/v1/moving-plans` | Criar plano (associado ao usuário) |
+| GET | `/api/v1/moving-plans` | Listar planos do usuário |
 | GET | `/api/v1/moving-plans/:id` | Obter plano |
 | DELETE | `/api/v1/moving-plans/:id` | Eliminar plano (`204`) |
 | GET | `/api/v1/moving-plans/:planId/tasks` | Listar tarefas do plano |

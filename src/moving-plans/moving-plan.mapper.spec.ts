@@ -32,6 +32,7 @@ describe('moving-plan.mapper', () => {
   it('mapMovingPlanToResponse should map Prisma dates to API strings', () => {
     const response = mapMovingPlanToResponse({
       id: '11111111-1111-1111-1111-111111111111',
+      userId: null,
       title: 'Mudança para Lisboa',
       origin: 'Porto',
       destination: 'Lisboa',

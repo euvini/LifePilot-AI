@@ -15,6 +15,7 @@ enum TaskStatus {
 
 model MovingPlan {
   id          String   @id @default(uuid()) @db.Uuid
+  userId      String?  @db.Uuid
   title       String   @db.VarChar(100)
   origin      String   @db.VarChar(200)
   destination String   @db.VarChar(200)
@@ -23,6 +24,7 @@ model MovingPlan {
   updatedAt   DateTime @updatedAt
   tasks       Task[]
 
+  @@index([userId])
   @@map("moving_plans")
 }
 
