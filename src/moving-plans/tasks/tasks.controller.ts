@@ -10,7 +10,9 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
+import { CurrentUser } from '../../auth/decorators/current-user.decorator.js';
 import { AuthGuard } from '../../auth/guards/auth.guard.js';
+import type { AuthenticatedUser } from '../../auth/interfaces/authenticated-user.interface.js';
 import { CreateTaskDto } from './dto/create-task.dto.js';
 import { UpdateTaskDto } from './dto/update-task.dto.js';
 import { TasksService } from './tasks.service.js';
@@ -24,21 +26,32 @@ export class TasksController {
   create(
     @Param('planId', ParseUUIDPipe) planId: string,
     @Body() dto: CreateTaskDto,
+    @CurrentUser() user?: AuthenticatedUser,
   ) {
-    return this.tasksService.create(planId, dto);
+    return user?.id
+      ? this.tasksService.create(planId, dto, user.id)
+      : this.tasksService.create(planId, dto);
   }
 
   @Get()
-  findAll(@Param('planId', ParseUUIDPipe) planId: string) {
-    return this.tasksService.findAll(planId);
+  findAll(
+    @Param('planId', ParseUUIDPipe) planId: string,
+    @CurrentUser() user?: AuthenticatedUser,
+  ) {
+    return user?.id
+      ? this.tasksService.findAll(planId, user.id)
+      : this.tasksService.findAll(planId);
   }
 
   @Get(':taskId')
   findOne(
     @Param('planId', ParseUUIDPipe) planId: string,
     @Param('taskId', ParseUUIDPipe) taskId: string,
+    @CurrentUser() user?: AuthenticatedUser,
   ) {
-    return this.tasksService.findOne(planId, taskId);
+    return user?.id
+      ? this.tasksService.findOne(planId, taskId, user.id)
+      : this.tasksService.findOne(planId, taskId);
   }
 
   @Patch(':taskId')
@@ -46,8 +59,11 @@ export class TasksController {
     @Param('planId', ParseUUIDPipe) planId: string,
     @Param('taskId', ParseUUIDPipe) taskId: string,
     @Body() dto: UpdateTaskDto,
+    @CurrentUser() user?: AuthenticatedUser,
   ) {
-    return this.tasksService.update(planId, taskId, dto);
+    return user?.id
+      ? this.tasksService.update(planId, taskId, dto, user.id)
+      : this.tasksService.update(planId, taskId, dto);
   }
 
   @Delete(':taskId')
@@ -55,7 +71,10 @@ export class TasksController {
   remove(
     @Param('planId', ParseUUIDPipe) planId: string,
     @Param('taskId', ParseUUIDPipe) taskId: string,
+    @CurrentUser() user?: AuthenticatedUser,
   ) {
-    return this.tasksService.remove(planId, taskId);
+    return user?.id
+      ? this.tasksService.remove(planId, taskId, user.id)
+      : this.tasksService.remove(planId, taskId);
   }
 }

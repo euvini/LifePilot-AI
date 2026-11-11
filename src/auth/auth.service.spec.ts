@@ -248,16 +248,33 @@ describe('AuthService', () => {
   });
 
   describe('logout', () => {
-    it('deve chamar signOut do Supabase', async () => {
+    it('deve chamar signOut do Supabase com sucesso', async () => {
       mockGetUser.mockResolvedValueOnce({
         data: {
           user: { id: 'user-uuid-1', email: 'user@teste.com' },
         },
         error: null,
       });
-      mockSignOut.mockResolvedValueOnce({});
+      mockSignOut.mockResolvedValueOnce({ error: null });
 
       await expect(service.logout('valid-token')).resolves.toBeUndefined();
+      expect(mockSignOut).toHaveBeenCalledWith('valid-token');
+    });
+
+    it('deve lançar BadGatewayException se signOut retornar erro', async () => {
+      mockGetUser.mockResolvedValueOnce({
+        data: {
+          user: { id: 'user-uuid-1', email: 'user@teste.com' },
+        },
+        error: null,
+      });
+      mockSignOut.mockResolvedValueOnce({
+        error: { message: 'Network error' },
+      });
+
+      await expect(service.logout('valid-token')).rejects.toThrow(
+        'Falha ao encerrar a sessão no provedor de autenticação.',
+      );
     });
   });
 });

@@ -159,10 +159,12 @@ export class AuthService {
   }
 
   async logout(token: string): Promise<void> {
-    // Valida o token e encerra a sessão no Supabase
     await this.validateToken(token);
-    await this.supabase.auth.admin?.signOut(token).catch(() => {
-      // Fallback gracioso
-    });
+    const { error } = await this.supabase.auth.admin.signOut(token);
+    if (error) {
+      throw new BadGatewayException(
+        'Falha ao encerrar a sessão no provedor de autenticação.',
+      );
+    }
   }
 }

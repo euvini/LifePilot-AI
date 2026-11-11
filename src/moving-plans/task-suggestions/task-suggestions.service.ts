@@ -34,10 +34,15 @@ export class TaskSuggestionsService {
   async generateSuggestions(
     planId: string,
     dto?: GenerateTaskSuggestionsDto,
+    userId?: string,
   ): Promise<TaskSuggestionsResponse> {
-    const plan = await this.prisma.movingPlan.findUnique({
-      where: { id: planId },
-    });
+    const plan = userId
+      ? await this.prisma.movingPlan.findFirst({
+          where: { id: planId, userId },
+        })
+      : await this.prisma.movingPlan.findUnique({
+          where: { id: planId },
+        });
 
     if (!plan) {
       throw new NotFoundException('Plano de mudança não encontrado');
@@ -102,10 +107,15 @@ export class TaskSuggestionsService {
   async acceptSuggestions(
     planId: string,
     dto: AcceptTaskSuggestionsDto,
+    userId?: string,
   ): Promise<TaskResponse[]> {
-    const plan = await this.prisma.movingPlan.findUnique({
-      where: { id: planId },
-    });
+    const plan = userId
+      ? await this.prisma.movingPlan.findFirst({
+          where: { id: planId, userId },
+        })
+      : await this.prisma.movingPlan.findUnique({
+          where: { id: planId },
+        });
 
     if (!plan) {
       throw new NotFoundException('Plano de mudança não encontrado');

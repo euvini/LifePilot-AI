@@ -17,8 +17,12 @@ import {
 export class TasksService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async create(planId: string, dto: CreateTaskDto): Promise<TaskResponse> {
-    await this.ensurePlanExists(planId);
+  async create(
+    planId: string,
+    dto: CreateTaskDto,
+    userId?: string,
+  ): Promise<TaskResponse> {
+    await this.ensurePlanExists(planId, userId);
 
     try {
       const task = await this.prisma.task.create({
@@ -37,8 +41,8 @@ export class TasksService {
     }
   }
 
-  async findAll(planId: string): Promise<TaskResponse[]> {
-    await this.ensurePlanExists(planId);
+  async findAll(planId: string, userId?: string): Promise<TaskResponse[]> {
+    await this.ensurePlanExists(planId, userId);
 
     const tasks = await this.prisma.task.findMany({
       where: { movingPlanId: planId },
@@ -48,8 +52,12 @@ export class TasksService {
     return tasks.map(mapTaskToResponse);
   }
 
-  async findOne(planId: string, taskId: string): Promise<TaskResponse> {
-    await this.ensurePlanExists(planId);
+  async findOne(
+    planId: string,
+    taskId: string,
+    userId?: string,
+  ): Promise<TaskResponse> {
+    await this.ensurePlanExists(planId, userId);
     return mapTaskToResponse(await this.findTaskOrThrow(planId, taskId));
   }
 
@@ -57,9 +65,10 @@ export class TasksService {
     planId: string,
     taskId: string,
     dto: UpdateTaskDto,
+    userId?: string,
   ): Promise<TaskResponse> {
     this.assertHasUpdateFields(dto);
-    await this.ensurePlanExists(planId);
+    await this.ensurePlanExists(planId, userId);
     await this.findTaskOrThrow(planId, taskId);
 
     const data: Prisma.TaskUpdateInput = {};
@@ -85,8 +94,12 @@ export class TasksService {
     return mapTaskToResponse(updated);
   }
 
-  async remove(planId: string, taskId: string): Promise<void> {
-    await this.ensurePlanExists(planId);
+  async remove(
+    planId: string,
+    taskId: string,
+    userId?: string,
+  ): Promise<void> {
+    await this.ensurePlanExists(planId, userId);
     await this.findTaskOrThrow(planId, taskId);
 
     await this.prisma.task.delete({
@@ -105,11 +118,19 @@ export class TasksService {
     }
   }
 
-  private async ensurePlanExists(planId: string): Promise<void> {
-    const plan = await this.prisma.movingPlan.findUnique({
-      where: { id: planId },
-      select: { id: true },
-    });
+  private async ensurePlanExists(
+    planId: string,
+    userId?: string,
+  ): Promise<void> {
+    const plan = userId
+      ? await this.prisma.movingPlan.findFirst({
+          where: { id: planId, userId },
+          select: { id: true },
+        })
+      : await this.prisma.movingPlan.findUnique({
+          where: { id: planId },
+          select: { id: true },
+        });
 
     if (!plan) {
       throw new NotFoundException('Plano de mudança não encontrado');

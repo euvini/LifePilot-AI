@@ -44,6 +44,7 @@ describe('TaskSuggestionsService', () => {
   const prismaMock = {
     movingPlan: {
       findUnique: vi.fn(),
+      findFirst: vi.fn(),
     },
     $transaction: vi.fn(),
   };
@@ -53,6 +54,7 @@ describe('TaskSuggestionsService', () => {
     vi.setSystemTime(new Date('2026-10-29T12:00:00.000Z'));
     vi.clearAllMocks();
     prismaMock.movingPlan.findUnique.mockResolvedValue(planRecord);
+    prismaMock.movingPlan.findFirst.mockResolvedValue(planRecord);
     generateTaskSuggestionsMock.mockResolvedValue(rawSuggestions);
 
     const module: TestingModule = await Test.createTestingModule({
@@ -622,6 +624,41 @@ describe('TaskSuggestionsService', () => {
           tasks: [{ title: title198, description: null, dueDate: '2026-11-20' }],
         }),
       ).rejects.toThrow(BadRequestException);
+    });
+
+    it('generateSuggestions should verify ownership when userId is provided', async () => {
+      const userId = 'user-owner-1';
+      prismaMock.movingPlan.findFirst.mockResolvedValue(planRecord);
+
+      await service.generateSuggestions(planId, undefined, userId);
+
+      expect(prismaMock.movingPlan.findFirst).toHaveBeenCalledWith({
+        where: { id: planId, userId },
+      });
+    });
+
+    it('generateSuggestions should throw NotFoundException when plan does not belong to user', async () => {
+      const userId = 'other-user';
+      prismaMock.movingPlan.findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.generateSuggestions(planId, undefined, userId),
+      ).rejects.toBeInstanceOf(NotFoundException);
+    });
+
+    it('acceptSuggestions should throw NotFoundException when plan does not belong to user', async () => {
+      const userId = 'other-user';
+      prismaMock.movingPlan.findFirst.mockResolvedValue(null);
+
+      await expect(
+        service.acceptSuggestions(
+          planId,
+          {
+            tasks: [{ title: 'Embalar', description: null, dueDate: '2026-11-20' }],
+          },
+          userId,
+        ),
+      ).rejects.toBeInstanceOf(NotFoundException);
     });
   });
 });

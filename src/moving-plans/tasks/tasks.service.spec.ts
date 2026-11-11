@@ -25,6 +25,7 @@ describe('TasksService', () => {
   const prisma = {
     movingPlan: {
       findUnique: vi.fn(),
+      findFirst: vi.fn(),
     },
     task: {
       create: vi.fn(),
@@ -38,6 +39,7 @@ describe('TasksService', () => {
   beforeEach(async () => {
     vi.clearAllMocks();
     prisma.movingPlan.findUnique.mockResolvedValue({ id: planId });
+    prisma.movingPlan.findFirst.mockResolvedValue({ id: planId });
 
     const module: TestingModule = await Test.createTestingModule({
       providers: [
@@ -152,6 +154,27 @@ describe('TasksService', () => {
     prisma.task.findFirst.mockResolvedValue(null);
 
     await expect(service.remove(planId, taskId)).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
+  });
+
+  it('ensurePlanExists should verify ownership when userId is provided', async () => {
+    const userId = 'user-owner-1';
+    prisma.movingPlan.findFirst.mockResolvedValue({ id: planId });
+
+    await service.findAll(planId, userId);
+
+    expect(prisma.movingPlan.findFirst).toHaveBeenCalledWith({
+      where: { id: planId, userId },
+      select: { id: true },
+    });
+  });
+
+  it('ensurePlanExists should throw NotFoundException when plan does not belong to user', async () => {
+    const userId = 'other-user';
+    prisma.movingPlan.findFirst.mockResolvedValue(null);
+
+    await expect(service.findAll(planId, userId)).rejects.toBeInstanceOf(
       NotFoundException,
     );
   });
