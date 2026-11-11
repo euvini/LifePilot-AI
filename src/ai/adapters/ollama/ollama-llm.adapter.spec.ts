@@ -154,6 +154,68 @@ describe('OllamaLlmAdapter', () => {
     expect(parsedBody.model).toBe('llama3.2:3b');
   });
 
+  it('should include Authorization header and default to https://ollama.com when OLLAMA_API_KEY is configured', async () => {
+    delete process.env.LLM_BASE_URL;
+    process.env.OLLAMA_API_KEY = 'ollama-cloud-test-key';
+
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+      ok: true,
+      status: 200,
+      json: vi.fn().mockResolvedValueOnce(sampleOllamaResponse),
+    } as unknown as Response);
+
+    await adapter.generateTaskSuggestions(sampleInput);
+
+    const [url, options] = fetchSpy.mock.calls[0];
+    expect(url).toBe('https://ollama.com/api/chat');
+    expect((options?.headers as Record<string, string>)?.Authorization).toBe(
+      'Bearer ollama-cloud-test-key',
+    );
+  });
+
+  it('should include Authorization header when LLM_API_KEY is configured', async () => {
+    delete process.env.LLM_BASE_URL;
+    process.env.LLM_API_KEY = 'ollama-cloud-test-key';
+
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+      ok: true,
+      status: 200,
+      json: vi.fn().mockResolvedValueOnce(sampleOllamaResponse),
+    } as unknown as Response);
+
+    await adapter.generateTaskSuggestions(sampleInput);
+
+    const [url, options] = fetchSpy.mock.calls[0];
+    expect(url).toBe('https://ollama.com/api/chat');
+    expect((options?.headers as Record<string, string>)?.Authorization).toBe(
+      'Bearer ollama-cloud-test-key',
+    );
+  });
+
+  it('should handle 401 authentication error gracefully', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+      ok: false,
+      status: 401,
+      statusText: 'Unauthorized',
+    } as unknown as Response);
+
+    await expect(adapter.generateTaskSuggestions(sampleInput)).rejects.toThrow(
+      'Falha de autenticação com o provedor Ollama (verifique seu LLM_API_KEY).',
+    );
+  });
+
+  it('should handle 429 rate limit error gracefully', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce({
+      ok: false,
+      status: 429,
+      statusText: 'Too Many Requests',
+    } as unknown as Response);
+
+    await expect(adapter.generateTaskSuggestions(sampleInput)).rejects.toThrow(
+      'Limite de requisições do provedor Ollama atingido. Tente novamente em alguns instantes.',
+    );
+  });
+
   it('should map TimeoutError to GatewayTimeoutException (504)', async () => {
     const timeoutError = new Error('The operation was aborted');
     timeoutError.name = 'TimeoutError';

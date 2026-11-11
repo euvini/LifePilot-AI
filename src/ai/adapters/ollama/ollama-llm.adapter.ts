@@ -1,6 +1,8 @@
 import {
   BadGatewayException,
   GatewayTimeoutException,
+  HttpException,
+  HttpStatus,
   Injectable,
 } from '@nestjs/common';
 import {
@@ -29,15 +31,22 @@ interface OllamaChatResponse {
 
 @Injectable()
 export class OllamaLlmAdapter implements LlmPort {
+  private get apiKey(): string | undefined {
+    return (process.env.OLLAMA_API_KEY || process.env.LLM_API_KEY)?.trim();
+  }
+
   private get model(): string {
     return process.env.LLM_MODEL?.trim() || 'qwen2.5:3b';
   }
 
   private get baseUrl(): string {
-    return (
-      process.env.LLM_BASE_URL?.trim().replace(/\/+$/, '') ||
-      'http://localhost:11434'
-    );
+    if (process.env.LLM_BASE_URL?.trim()) {
+      return process.env.LLM_BASE_URL.trim().replace(/\/+$/, '');
+    }
+    if (this.apiKey) {
+      return 'https://ollama.com';
+    }
+    return 'http://localhost:11434';
   }
 
   private get timeoutMs(): number {
@@ -126,13 +135,18 @@ export class OllamaLlmAdapter implements LlmPort {
       },
     };
 
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+    };
+    if (this.apiKey) {
+      headers['Authorization'] = `Bearer ${this.apiKey}`;
+    }
+
     let response: Response;
     try {
       response = await fetch(`${this.baseUrl}/api/chat`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify(requestBody),
         signal: AbortSignal.timeout(this.timeoutMs),
       });
@@ -151,6 +165,17 @@ export class OllamaLlmAdapter implements LlmPort {
     }
 
     if (!response.ok) {
+      if (response.status === 401 || response.status === 403) {
+        throw new BadGatewayException(
+          'Falha de autenticação com o provedor Ollama (verifique seu LLM_API_KEY).',
+        );
+      }
+      if (response.status === 429) {
+        throw new HttpException(
+          'Limite de requisições do provedor Ollama atingido. Tente novamente em alguns instantes.',
+          HttpStatus.TOO_MANY_REQUESTS,
+        );
+      }
       throw new BadGatewayException(
         `Falha na comunicação com o assistente local Ollama (${response.status} ${response.statusText}).`,
       );

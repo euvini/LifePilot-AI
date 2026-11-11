@@ -43,4 +43,19 @@ export class MovingPlansService {
 
     return mapMovingPlanToResponse(plan);
   }
+
+  async remove(id: string): Promise<void> {
+    const plan = await this.prisma.movingPlan.findUnique({
+      where: { id },
+      select: { id: true },
+    });
+
+    if (!plan) {
+      throw new NotFoundException('Plano de mudança não encontrado');
+    }
+
+    await this.prisma.movingPlan.delete({
+      where: { id },
+    });
+  }
 }
